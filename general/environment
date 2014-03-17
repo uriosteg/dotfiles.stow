@@ -1,0 +1,10 @@
+if [[ -d $HOME/bin ]]; then
+   PATH="$PATH:$HOME/bin"
+fi
+
+export PAGER='most'
+export MANPAGER='most -s'
+
+if [[ -f $HOME/.dircolors ]]; then
+   export LS_COLORS="$HOME/.dircolors"
+fi

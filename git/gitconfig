@@ -1,0 +1,13 @@
+[user]
+	name = Fernando Becerra Méndez
+	email = github@hidetox.in
+
+[color]
+   diff =   "auto"
+	status = auto
+	branch = auto
+	ui = true
+
+[core]
+	editor = vim
+   pager =  "less -R"

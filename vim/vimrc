@@ -1,0 +1,82 @@
+" Do not use compatibility mode
+set nocompatible
+filetype off
+
+" Use utf-8
+set encoding=utf-8
+
+" Enable mouse
+set mouse=a
+
+" Set line numbers
+set number
+
+" Better indent
+set autoindent
+set smartindent
+
+" Better search
+set ignorecase
+set smartcase
+set incsearch
+set magic
+
+" Set history to 1,000 commands
+set history=1000 
+
+" Fix backspace
+set backspace=eol,start,indent
+
+" No backups
+set nobackup
+set nowb
+set noswapfile
+
+" Tab behavior
+set expandtab
+set smarttab
+set shiftwidth=3
+set tabstop=3
+
+" Never show mode
+set noshowmode
+
+" Appearance options
+set t_Co=256
+set ruler
+set laststatus=2
+syntax on
+colorscheme delek
+set background=dark
+
+" Setup Vundle
+set rtp+=~/.vim/bundle/vundle
+   call vundle#rc()
+   Bundle 'gmarik/vundle'
+
+" Load plugins
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/syntastic'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-fugitive'
+Bundle 'wincent/command-t'
+Bundle 'majutsushi/tagbar'
+Bundle 'flazz/vim-colorschemes' 
+Bundle 'sjl/gundo'
+Bundle 'mattn/gist-vim'
+Bundle 'MarcWeber/vim-addon-mw-utils' 
+Bundle 'tomtom/tlib_vim'              
+Bundle 'garbas/vim-snipmate'
+Bundle 'ervandew/supertab'
+   let g:SupertabDefaultCompletitionType='context'
+Bundle 'bling/vim-airline'
+   let g:airline_powerline_fonts=0
+   let g:airline_theme='murmur'
+
+" Change leader
+let mapleader=","
+let g:mapleader=","
+
+" Quick save
+nmap <leader>w :w!<cr>

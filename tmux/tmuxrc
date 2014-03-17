@@ -1,0 +1,60 @@
+# Use UTF8
+set -g utf8
+set-window-option -g utf8 on
+
+# Use 256 colors
+set -g default-terminal "screen-256color"
+
+# Set scrollback to 10,000
+set -g history-limit 10000
+
+# Set Ctrl-a as the default prefix and unbind C-b
+set -g prefix C-a
+unbind C-b
+
+# Use | to split vertically and - to split horizontally
+bind | split-window -h
+bind - split-window -v
+
+# Resize panes using H, J, K, L
+bind H resize-pane -L 5
+bind J resize-pane -D 5
+bind K resize-pane -U 5
+bind L resize-pane -R 5
+
+# Mouse options
+set -g mode-mouse on
+set -g mouse-resize-pane on
+set -g mouse-select-pane on
+set -g mouse-select-window on
+
+# Customize status bar bahavior
+set-option -g status on                
+set -g status-utf8 on                  
+set -g status-interval 5               
+set -g status-justify centre           
+setw -g monitor-activity on
+set -g visual-activity on
+
+# Customize status bar appearance
+set-window-option -g window-status-bg colour236 
+set-option -g status-bg colour235 
+set-option -g status-fg yellow 
+set-option -g status-attr dim 
+set-window-option -g window-status-fg brightblue 
+set-window-option -g window-status-bg colour236 
+set-window-option -g window-status-attr dim
+set-window-option -g window-status-current-fg brightred 
+set-window-option -g window-status-current-bg colour236 
+set-window-option -g window-status-current-attr bright
+set -g status-left-length 70
+set -g status-left "#[fg=green]: #h : #[fg=brightblue]#(curl icanhazip.com) #[fg=yellow]#(ifconfig en0 | grep 'inet ' | awk '{print \"en0 \" $2}') #(ifconfig en1 | grep 'inet ' | awk '{print \"en1 \" $2}') #[fg=red]#(ifconfig tun0 | grep 'inet ' | awk '{print \"vpn \" $2}') "
+set -g status-right-length 60
+set -g status-right "#[fg=blue]#S #I:#P #[fg=yellow]:: %d %b %Y #[fg=green]:: %l:%M %p :: #(date -u | awk '{print $4}')::"
+
+# Customize clock mode
+set-window-option -g clock-mode-colour colour40
+
+# Customize panes appearance
+set-option -g pane-border-fg colour236
+set-option -g pane-active-border-fg colour196
