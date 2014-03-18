@@ -41,14 +41,6 @@ set tabstop=3
 " Never show mode
 set noshowmode
 
-" Appearance options
-set t_Co=256
-set ruler
-set laststatus=2
-syntax on
-colorscheme delek
-set background=dark
-
 " Setup Vundle
 set rtp+=~/.vim/bundle/vundle
    call vundle#rc()
@@ -73,6 +65,15 @@ Bundle 'ervandew/supertab'
 Bundle 'bling/vim-airline'
    let g:airline_powerline_fonts=0
    let g:airline_theme='murmur'
+
+" Appearance options
+set t_Co=256
+set ruler
+set laststatus=2
+syntax on
+colorscheme jellybeans
+set background=dark
+
 
 " Change leader
 let mapleader=","

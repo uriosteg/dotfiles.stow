@@ -48,13 +48,13 @@ set-window-option -g window-status-current-fg brightred
 set-window-option -g window-status-current-bg colour236 
 set-window-option -g window-status-current-attr bright
 set -g status-left-length 70
-set -g status-left "#[fg=green]: #h : #[fg=brightblue]#(curl icanhazip.com) #[fg=yellow]#(ifconfig en0 | grep 'inet ' | awk '{print \"en0 \" $2}') #(ifconfig en1 | grep 'inet ' | awk '{print \"en1 \" $2}') #[fg=red]#(ifconfig tun0 | grep 'inet ' | awk '{print \"vpn \" $2}') "
+set -g status-left "#[fg=colour120]: #h : #[fg=colour111]#(curl icanhazip.com) #[fg=colour227]#(ifconfig en0 | grep 'inet ' | awk '{print \"en0 \" $2}') #(ifconfig en1 | grep 'inet ' | awk '{print \"en1 \" $2}') #[fg=red]#(ifconfig tun0 | grep 'inet ' | awk '{print \"vpn \" $2}') "
 set -g status-right-length 60
-set -g status-right "#[fg=blue]#S #I:#P #[fg=yellow]:: %d %b %Y #[fg=green]:: %l:%M %p :: #(date -u | awk '{print $4}')::"
+set -g status-right "#[fg=colour177]#S #I:#P #[fg=colour227]:: %d %b %Y #[fg=colour74]:: %l:%M %p :: #(date -u | awk '{print $4}')::"
 
 # Customize clock mode
-set-window-option -g clock-mode-colour colour40
+set-window-option -g clock-mode-colour colour155
 
 # Customize panes appearance
 set-option -g pane-border-fg colour236
-set-option -g pane-active-border-fg colour196
+set-option -g pane-active-border-fg colour111
