@@ -8,8 +8,8 @@ PS3='>>'
 PS4='>>>'
 
 # If environment file exists, load environment variables
-if [ -f $DOTGENERAL/environment ]; then
-   source $DOTGENERAL/environment
+if [ -f $HOME/.environment ]; then
+   source $HOME/.environment
 fi
 
 # If aliases file exists, load aliases
