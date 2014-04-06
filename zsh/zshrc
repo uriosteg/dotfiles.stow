@@ -1,0 +1,22 @@
+# Load auto-completition
+autoload -U compinit
+compinit
+zstyle ':completion:*' menu select
+
+# Setup prompts
+autoload -U colors && colors
+PS1=$'%{\n\e[1;38;5;111m%}┌[%D{%a %b %d}]-[%~]%{\n\e[1;38;5;77m%}└─[%n@%m]%# '
+RPS1=$'%{\e[1;38;5;77m[%?]\e[0;38;5;171m%}'
+PS2=''
+PS3=''
+PS4=''
+
+# Check if environment file exists, then load it
+if [ -f $HOME/.environment ]; then
+   source $HOME/.environment
+fi
+
+# Check if aliases file exists, then load it
+if [ -f $HOME/.aliases ]; then
+   source $HOME/.aliases
+fi
