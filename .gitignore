@@ -1,0 +1,6 @@
+# Ignore not related files
+github*
+
+# Ignore vim sub-directories
+vim/bundle
+vim/colors
