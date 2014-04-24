@@ -4,3 +4,6 @@ github*
 # Ignore vim sub-directories
 vim/bundle
 vim/colors
+
+# Ignore fonts files
+fonts/
