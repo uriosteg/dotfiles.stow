@@ -1,9 +1,9 @@
 # If not running interactively, don't do anything
-[ -z "$PS1" ] && return
+[ -t 0 ] || return
 
 # Setup custom prompts
 # For more info, look at http://francesco-cek.com/setting-a-custom-prompt-in-ksh-2/
-PS1=$'\n\e[1;38;5;111m┌[$(date +"%a %b %d")]-[$(pwd)]\n\e[1;38;5;77m└─[\!]-[$(jobs | wc -l)]-[$(whoami)@$(hostname)]\$ \e[0;38;5;171m'
+PS1=$'\n\e[1;38;5;111m┌[$(date +"%a %b %d")]-[$(pwd | sed -e "s|$HOME|~|")]\n\e[1;38;5;77m└─[\!]-[$(jobs | wc -l)]-[$(whoami)@$(hostname)]\$ \e[0;38;5;171m'
 PS2=$'>'
 PS3=$'>>'
 PS4=$'>>>'
