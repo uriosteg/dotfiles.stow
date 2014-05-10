@@ -41,30 +41,30 @@ set tabstop=3
 " Never show mode
 set noshowmode
 
-" Setup Vundle
-set rtp+=~/.vim/bundle/vundle
-   call vundle#rc()
-   Bundle 'gmarik/vundle'
-
-" Load plugins
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/syntastic'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-fugitive'
-Bundle 'wincent/command-t'
-Bundle 'majutsushi/tagbar'
-Bundle 'flazz/vim-colorschemes' 
-Bundle 'sjl/gundo'
-Bundle 'mattn/gist-vim'
-Bundle 'MarcWeber/vim-addon-mw-utils' 
-Bundle 'tomtom/tlib_vim'              
-Bundle 'garbas/vim-snipmate'
-Bundle 'ervandew/supertab'
-   let g:SupertabDefaultCompletitionType='context'
-Bundle 'bling/vim-airline'
-   let g:airline_powerline_fonts=0
-   let g:airline_theme='murmur'
+" Setup Vundle and plugins
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin('~/.vim/bundle')
+   Plugin 'gmarik/vundle'
+   Plugin 'scrooloose/nerdtree'
+   Plugin 'scrooloose/nerdcommenter'
+   Plugin 'scrooloose/syntastic'
+   Plugin 'tpope/vim-surround'
+   Plugin 'tpope/vim-fugitive'
+   Plugin 'wincent/command-t'
+   Plugin 'majutsushi/tagbar'
+   Plugin 'flazz/vim-colorschemes' 
+   Plugin 'sjl/gundo'
+   Plugin 'mattn/gist-vim'
+   Plugin 'MarcWeber/vim-addon-mw-utils' 
+   Plugin 'tomtom/tlib_vim'              
+   Plugin 'garbas/vim-snipmate'
+   Plugin 'ervandew/supertab'
+      let g:SupertabDefaultCompletitionType='context'
+   Plugin 'bling/vim-airline'
+      let g:airline_powerline_fonts=0
+      let g:airline_theme='murmur'
+call vundle#end()
+filetype plugin indent on
 
 " Appearance options
 set t_Co=256
@@ -73,7 +73,6 @@ set laststatus=2
 syntax on
 colorscheme jellybeans
 set background=dark
-
 
 " Change leader
 let mapleader=","
