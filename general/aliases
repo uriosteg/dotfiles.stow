@@ -1,3 +1,4 @@
+# vim: syntax=sh
 # Command aliases 
 alias h='history'
 alias j='jobs -l'
@@ -5,6 +6,11 @@ alias l='ls -1F'
 alias ls='ls -F --color=auto'
 alias ll='ls -FlAh'
 alias lt='ls -FlAht'
+alias l1='ls -Flah ..' 
+alias l2='ls -Flah ../..' 
+alias l3='ls -Flah ../../..' 
+alias l4='ls -Flah ../../../..' 
+alias l5='ls -Flah ../../../../..' 
 alias dot='ls -1Fa | grep --color=never "^\."'
 alias syl='find $PWD -type  -type ll -type l'
 alias dir='dir --color=auto'
@@ -19,7 +25,8 @@ alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias mkdir='mkdir -pv'
 alias ports='netstat -tulanp'
-alias by='exit'
+alias ccat='pygmentize -O style=monokai -f console256 -g'
+alias bye='exit'
 
 # Vim aliases
 alias vi='vim'

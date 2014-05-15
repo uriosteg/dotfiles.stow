@@ -2,7 +2,7 @@
 [ -z "$PS1" ] && return
 
 # Setup custom prompts
-PS1='\[\e[1;38;5;111m\]\n┌[\d]-[\w]\n\[\e[38;5;77m\]└─[\!]-[\j]-[\u@\h]\$\[\e[0;38;5;171m\] '
+PS1='\[\e[${PS_COLOR1}\]\n┌[\d]-[\w]\n\[\e[${PS_COLOR2}\]└─[\!]-[\j]-[\u@\h]\$\[\e[${PS_COLOR3}\] '
 PS2='>'
 PS3='>>'
 PS4='>>>'

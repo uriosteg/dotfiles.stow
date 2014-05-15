@@ -1,12 +1,14 @@
+# vim: syntax=sh
 # Load auto-completition
 autoload -U compinit
 compinit
 zstyle ':completion:*' menu select
 
 # Setup prompts
+setopt promptsubst
 autoload -U colors && colors
-PS1=$'%{\n\e[1;38;5;111m%}┌[%D{%a %b %d}]-[%~]%{\n\e[1;38;5;77m%}└─[%n@%m]%# '
-RPS1=$'%{\e[1;38;5;77m[%?]\e[0;38;5;171m%}'
+PS1=$'%{\n\e[${PS_COLOR1}%}┌[%D{%a %b %d}]-[%~]%{\n\e[${PS_COLOR2}%}└─[%n@%m]%# '
+RPS1=$'%{\e[${PS_COLOR2}%}[%?]%{\e[${PS_COLOR3}%}'
 PS2=''
 PS3=''
 PS4=''

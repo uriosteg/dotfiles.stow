@@ -1,3 +1,4 @@
+# vim: syntax=sh
 # If bin directory exists load it to $PATH
 if [ -d $HOME/bin ]; then
    PATH="$PATH:$HOME/bin"
@@ -6,8 +7,15 @@ fi
 export EDITOR='vim'
 export PAGER='most'
 export MANPAGER='most -s'
+
+# Variables for shell look and feel
+
+export PS_COLOR1='1;38;5;111m'
+export PS_COLOR2='1;38;5;77m'
+export PS_COLOR3='0;38;5;33m'
 export GREP_OPTIONS=''
 export GREP_COLORS='mt=1;38;5;167:fn=0;38;5;63:se=1;38;5;63:ln=0;38;5;63'
+
 [ -e "$HOME/.dircolors" ] && DIR_COLORS="$HOME/.dircolors"
 [ -e "$DIR_COLORS" ] || DIR_COLORS=""
 eval "`dircolors -b $DIR_COLORS`"
