@@ -9,10 +9,16 @@ export PAGER='most'
 export MANPAGER='most -s'
 
 # Variables for shell look and feel
+if [[ $(whoami) = "root" ]]; then
+   export PS_COLOR1='1;38;5;160m'  # Red
+   export PS_COLOR2='1;38;5;184m'  # Yellow
+   export PS_COLOR3='0;38;5;76m'   # Green
+else
+   export PS_COLOR1='1;38;5;111m'  # Blue
+   export PS_COLOR2='1;38;5;77m'   # Green
+   export PS_COLOR3='0;38;5;33m'   # Dark Blue
+fi
 
-export PS_COLOR1='1;38;5;111m'
-export PS_COLOR2='1;38;5;77m'
-export PS_COLOR3='0;38;5;33m'
 export GREP_OPTIONS=''
 export GREP_COLORS='mt=1;38;5;167:fn=0;38;5;63:se=1;38;5;63:ln=0;38;5;63'
 

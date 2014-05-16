@@ -1,0 +1,9 @@
+# vim: syntax=sh
+
+# Function to print color escape codes, more information
+# at: http://www.tldp.org/HOWTO/Bash-Prompt-HOWTO/x329.html 
+print_colors () {
+   for code in {0..255}; do
+      printf "\e[38;05;${code}m $code: Test\n"; 
+   done
+}
