@@ -1,0 +1,9 @@
+# vim: syntax=sh
+
+banner=no            # Do not show banner
+color_patches=no     # Do not include colors on redirection
+plain=normal         
+newtext=darkblue     
+oldtext=darkred     
+diffstuff=darkgreen
+cvsstuff=darkwhite
