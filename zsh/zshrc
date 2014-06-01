@@ -1,17 +1,28 @@
-# vim: syntax=sh
-# Load auto-completition
-autoload -U compinit
-compinit
-zstyle ':completion:*' menu select
+# vim: syntax=zsh
 
-# Setup prompts
-setopt promptsubst
-autoload -U colors && colors
-PS1=$'%{\n\e[${PS_COLOR1}%}┌[%D{%a %b %d}]-[%~]%{\n\e[${PS_COLOR2}%}└─[%n@%m]%# '
-RPS1=$'%{\e[${PS_COLOR2}%}[%?]%{\e[${PS_COLOR3}%}'
-PS2=''
-PS3=''
-PS4=''
+autoload -Uz compinit && compinit
+autoload -Uz colors && colors
+
+zstyle ':completion:*' menu select                          # Set menu for auto-completition
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'   # Auto-completition is case insensitive
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}       # Auto-completition with colors 
+
+setopt autocd                                               # No need to type cd
+setopt correct                                               # Correct spelling of commands
+setopt promptsubst                                          # Enable prompt substitution
+setopt completeinword                                       # Complete from both ends
+setopt sharehistory                                         # Share history in all shells
+setopt extendedhistory                                      # Put timestamp to the history file
+setopt appendhistory                                        # Append to history
+setopt histverify                                           # Show before executing history comands
+setopt histreduceblanks                                     # Trim blanks
+setopt interactivecomments                                  # Pound sign in interactive prompt
+setopt globdots                                             # Do not require a leading . in a filename to be matched
+setopt extendedglob                                         # Treat the #, ~ and ^ characters as part of patterns for filename generation
+setopt completealiases                                      # Auto-complete aliases
+setopt chaselinks                                           # Resolve symlinks
+
+bindkey -v                                                  # Vi mode
 
 # Check if environment file exists, then load it
 if [ -f $HOME/.environment ]; then
@@ -27,3 +38,10 @@ fi
 if [ -f $HOME/.functions ]; then
    source $HOME/.functions
 fi
+
+# Setup prompts
+PS1=$'%{\n\e[${PS_COLOR1}%}┌[%D{%a %b %d}]-[%~]%{\n\e[${PS_COLOR2}%}└─[%n@%m]%# '
+RPS1=$'%{\e[${PS_COLOR2}%}[%?]%{\e[${PS_COLOR3}%}'
+PS2=''
+PS3=''
+PS4=''

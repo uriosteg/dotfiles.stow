@@ -4,9 +4,18 @@ if [ -d $HOME/bin ]; then
    PATH="$PATH:$HOME/bin"
 fi
 
+# Set option for editor and pager
 export EDITOR='vim'
+export GIT_EDITOR="$EDITOR"
 export PAGER='most'
 export MANPAGER='most -s'
+
+# Set options for history
+export HISTFILE="$HOME/.${PROFILE_SHELL}_history"
+export HISTSIZE='2048'
+export SAVEHIST='2048'
+
+export KEYTIMEOUT='1'
 
 # Variables for shell look and feel
 if [[ $(whoami) = "root" ]]; then
