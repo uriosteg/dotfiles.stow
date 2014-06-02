@@ -8,7 +8,7 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'   # Auto-completition 
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}       # Auto-completition with colors 
 
 setopt autocd                                               # No need to type cd
-setopt correct                                               # Correct spelling of commands
+setopt correct                                              # Correct spelling of commands
 setopt promptsubst                                          # Enable prompt substitution
 setopt completeinword                                       # Complete from both ends
 setopt sharehistory                                         # Share history in all shells
@@ -16,6 +16,8 @@ setopt extendedhistory                                      # Put timestamp to t
 setopt appendhistory                                        # Append to history
 setopt histverify                                           # Show before executing history comands
 setopt histreduceblanks                                     # Trim blanks
+setopt histignoredups                                       # Do not write duplicates in history
+setopt histreduceblanks                                     # Remove extra blanks of commands in history
 setopt interactivecomments                                  # Pound sign in interactive prompt
 setopt globdots                                             # Do not require a leading . in a filename to be matched
 setopt extendedglob                                         # Treat the #, ~ and ^ characters as part of patterns for filename generation
