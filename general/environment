@@ -28,7 +28,7 @@ else
    export PS_COLOR3='0;38;5;116m'  # Blueish
 fi
 
-export GREP_OPTIONS=''
+export GREP_OPTIONS='--line-number --color=auto'
 export GREP_COLORS='fn=0;38;5;63:se=1;38;5;252:sl=0;38;5;237:cx=0;38;5;246:ln=0;38;5;71:mt=1;38;5;167:rv'
 
 [ -e "$HOME/.dircolors" ] && DIR_COLORS="$HOME/.dircolors"

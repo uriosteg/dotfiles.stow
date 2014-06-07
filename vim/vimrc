@@ -62,7 +62,7 @@ call vundle#begin('~/.vim/bundle')
       let g:SupertabDefaultCompletitionType='context'
    Plugin 'bling/vim-airline'
       let g:airline_powerline_fonts=0
-      let g:airline_theme='murmur'
+      let g:airline_theme='kolor'
 call vundle#end()
 filetype plugin indent on
 
@@ -70,9 +70,11 @@ filetype plugin indent on
 set t_Co=256
 set ruler
 set laststatus=2
+set cursorline
+set wildmenu
 syntax on
-colorscheme jellybeans
 set background=dark
+colorscheme jelleybeans
 
 " Change leader
 let mapleader=","
