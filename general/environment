@@ -23,13 +23,13 @@ if [[ $(whoami) = "root" ]]; then
    export PS_COLOR2='1;38;5;184m'  # Yellow
    export PS_COLOR3='0;38;5;76m'   # Green
 else
-   export PS_COLOR1='1;38;5;111m'  # Blue
-   export PS_COLOR2='1;38;5;77m'   # Green
-   export PS_COLOR3='0;38;5;33m'   # Dark Blue
+   export PS_COLOR1='1;38;5;60m'   # Purple
+   export PS_COLOR2='1;38;5;72m'   # Greenish
+   export PS_COLOR3='0;38;5;116m'  # Blueish
 fi
 
 export GREP_OPTIONS=''
-export GREP_COLORS='mt=1;38;5;167:fn=0;38;5;63:se=1;38;5;63:ln=0;38;5;63'
+export GREP_COLORS='fn=0;38;5;63:se=1;38;5;252:sl=0;38;5;237:cx=0;38;5;246:ln=0;38;5;71:mt=1;38;5;167:rv'
 
 [ -e "$HOME/.dircolors" ] && DIR_COLORS="$HOME/.dircolors"
 [ -e "$DIR_COLORS" ] || DIR_COLORS=""
