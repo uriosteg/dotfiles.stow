@@ -1,0 +1,21 @@
+# Alway sort files
+--sort-files
+--group
+
+# Case insensitive, unless mix cases in pattern
+--smart-case
+
+# Follow symlinks
+--follow
+
+# Use most as pager
+--pager=most -s
+
+# Use color
+--color
+--color-match=red
+--color-lineno=on_green
+--color-filename=cyan
+
+# Directories to ignore
+--ignore-dir=.git

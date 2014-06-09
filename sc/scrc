@@ -1,0 +1,14 @@
+set scrc
+set color
+set colorneg
+set colorerr
+
+# Possible colors white, black, green, yellow, red, blue, cyan and magenta
+color 1 = @green; @black
+color 2 = @red;   @blue
+color 3 = @white; @red
+color 4 = @black; @yellow
+color 5 = @black; @cyan
+color 6 = @red;   @cyan
+color 7 = @white; @black
+color 8 = @red;   @black

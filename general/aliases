@@ -1,4 +1,5 @@
 # vim: syntax=sh
+
 # Command aliases 
 alias h='history'
 alias j='jobs -l'
@@ -23,7 +24,9 @@ alias tmux='tmux -2'
 alias mkdir='mkdir -pv'
 alias ports='netstat -tulanp'
 alias ccat='pygmentize -O style=monokai -f console256 -g'
+alias cdiff='colordiff'
 alias bye='exit'
+alias ack='ack-grep'
 
 # Vim aliases
 alias vi='vim'
@@ -31,6 +34,7 @@ alias vih='vim -o'
 alias viv='vim -O'
 alias vir='vim -r'
 alias svi='sudo vim'
+alias vdiff='vimdiff'
 
 # Error aliases
 alias sl='ls'
@@ -45,4 +49,8 @@ alias .2='cd ../..'
 alias .3='cd ../../..'
 alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
-alias cdb='cd $OLDPWD'
+alias .6='cd ../../../../../..'
+alias .7='cd ../../../../../../..'
+alias .8='cd ../../../../../../../..'
+alias .9='cd ../../../../../../../../..'
+alias cdb='cd -'
