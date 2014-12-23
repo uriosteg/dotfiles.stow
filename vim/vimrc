@@ -41,7 +41,16 @@ set tabstop=3
 " Never show mode
 set noshowmode
 
+" Change leader
+let mapleader=","
+let g:mapleader=","
+
+" Quick save
+nmap <leader>w :w!<cr>
+
 " Setup Vundle and plugins
+set nocompatible
+filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin('~/.vim/bundle')
    Plugin 'gmarik/vundle'
@@ -74,11 +83,5 @@ set cursorline
 set wildmenu
 syntax on
 set background=dark
-colorscheme jelleybeans
+colorscheme xoria256
 
-" Change leader
-let mapleader=","
-let g:mapleader=","
-
-" Quick save
-nmap <leader>w :w!<cr>

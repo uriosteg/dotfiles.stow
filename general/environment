@@ -18,14 +18,26 @@ export SAVEHIST='2048'
 export KEYTIMEOUT='1'
 
 # Variables for shell look and feel
-if [[ $(whoami) = "root" ]]; then
-   export PS_COLOR1='1;38;5;160m'  # Red
-   export PS_COLOR2='1;38;5;184m'  # Yellow
-   export PS_COLOR3='0;38;5;76m'   # Green
+if [[ $SHELL = "bin/zsh" ]];then
+   if [[ $(whoami) = "root" ]]; then
+      export PSC1='fg_bold[10]'
+      export PSC2='fg_bold[20]'
+      export PSC3='fg_bold[30]'
+   else
+      export PSC1='fg_bold[40]'
+      export PSC2='fg_bold[50]'
+      export PSC3='fg_bold[60]'
+   fi
 else
-   export PS_COLOR1='1;38;5;60m'   # Purple
-   export PS_COLOR2='1;38;5;72m'   # Greenish
-   export PS_COLOR3='0;38;5;116m'  # Blueish
+   if [[ $(whoami) = "root" ]]; then
+      export PS_COLOR1='1;38;5;160m'  # Red
+      export PS_COLOR2='1;38;5;184m'  # Yellow
+      export PS_COLOR3='0;38;5;76m'   # Green
+   else
+      export PS_COLOR1='1;38;5;60m'   # Purple
+      export PS_COLOR2='1;38;5;72m'   # Greenish
+      export PS_COLOR3='0;38;5;116m'  # Blueish
+   fi
 fi
 
 export GREP_OPTIONS='--line-number --color=auto'
@@ -34,3 +46,20 @@ export GREP_COLORS='fn=0;38;5;63:se=1;38;5;252:sl=0;38;5;237:cx=0;38;5;246:ln=0;
 [ -e "$HOME/.dircolors" ] && DIR_COLORS="$HOME/.dircolors"
 [ -e "$DIR_COLORS" ] || DIR_COLORS=""
 eval "`dircolors -b $DIR_COLORS`"
+
+export TERM="screen-256color"
+
+# Unicode symbols for prompt as seen on https://mkaz.com/2014/04/17/the-bash-prompt/
+# for more symbols you can look at http://unicode-table.com/en/
+export LB="\342\237\246"     # Left bracket
+export RB="\342\237\247"     # Right bracket
+export AT="\342\231\252"     # Music note symbol
+export LUB="\342\225\224"    # Left upper box symbol
+export LDB="\342\225\232"    # Left down box symbol 
+export RUB="\342\225\227"    # Right upper box symbol
+export RDB="\342\225\235"    # Right dow box symbol
+export DASH="\342\225\220"   # Dash for separing elements
+export CHECK="\342\234\224"  # Check symbol
+export CROSS="\342\234\227"  # Cross symbol 
+export RARROW="\342\207\222" # Right rrow symbol
+export LARROW="\342\207\220" # Left arrow symbol

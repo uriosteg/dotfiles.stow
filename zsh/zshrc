@@ -37,13 +37,26 @@ if [ -f $HOME/.aliases ]; then
 fi
 
 # If functions file exists, then load it
-if [ -f $HOME/.functions ]; then
-   source $HOME/.functions
+if [ -f $HOME/.dotfiles/general/functions ]; then
+   source $HOME/.dotfiles/general/functions
 fi
 
+# ZSH specific functions
+if [ -f $HOME/.dotfiles/zsh/functions.zsh ];then
+   source $HOME/.dotfiles/zsh/functions.zsh
+fi
+
+add_color
+
 # Setup prompts
-PS1=$'%{\n\e[${PS_COLOR1}%}┌[%D{%a %b %d}]-[%~]%{\n\e[${PS_COLOR2}%}└─[%n@%m]%# '
-RPS1=$'%{\e[${PS_COLOR2}%}[%?]%{\e[${PS_COLOR3}%}'
+PS1=$'└$DASH%n@%m%# '
+RPS1=$'%?'
 PS2=''
 PS3=''
 PS4=''
+
+# FISH like syntax highlighting plugin
+source $HOME/.dotfiles/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
+
+# Override syntax highlighting style
+source $HOME/.dotfiles/zsh/zsh-syntax-override.zsh
