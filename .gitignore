@@ -7,3 +7,6 @@ vim/colors
 
 # Ignore fonts files
 fonts/
+
+# Ignore zsh syntax highlightinhg plugin
+zsh/zsh-syntax-highlighting
