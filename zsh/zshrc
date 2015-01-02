@@ -27,13 +27,13 @@ setopt chaselinks                                           # Resolve symlinks
 bindkey -v                                                  # Vi mode
 
 # Check if environment file exists, then load it
-if [ -f $HOME/.environment ]; then
-   source $HOME/.environment
+if [ -f $HOME/.dotfiles/general/environment ]; then
+   source $HOME/.dotfiles/general/environment
 fi
 
 # Check if aliases file exists, then load it
-if [ -f $HOME/.aliases ]; then
-   source $HOME/.aliases
+if [ -f $HOME/.dotfiles/general/aliases ]; then
+   source $HOME/.dotfiles/general/aliases
 fi
 
 # If functions file exists, then load it

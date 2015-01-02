@@ -8,16 +8,16 @@ PS3='>>'
 PS4='>>>'
 
 # If environment file exists, load environment variables
-if [ -f $HOME/.environment ]; then
-   source $HOME/.environment
+if [ -f $HOME/.dotfiles/general/environment ]; then
+   source $HOME/.dotfiles/general/environment
 fi
 
 # If aliases file exists, load aliases
-if [ -f $HOME/.aliases ]; then
+if [ -f $HOME/.dotfiles/general/aliases ]; then
    source $HOME/.aliases
 fi
 
 # If functions file exists, load functions
-if [ -f $HOME/.functions ]; then
-   source $HOME/.functions
+if [ -f $HOME/.dotfiles/general/functions ]; then
+   source $HOME/.dotfiles/general/functions
 fi
