@@ -15,13 +15,6 @@ elif [ -n "ZSH_VERSION" ]; then
    if [ -f "$HOME/.zshrc" ]; then
       . "$HOME/.zshrc"
    fi
-elif [ -n "KSH_VERSION" ]; then
-   export PROFILE_SHELL='ksh'
-   # Include .kshrc if it exists
-   if [ -f "$HOME/.kshrc" ]; then
-      export ENV="$HOME/.kshrc"
-      . "$HOME/.kshrc"
-   fi
 else
    export PROFILE_SHELL='sh'
 fi
