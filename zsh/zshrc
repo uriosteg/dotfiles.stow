@@ -1,62 +1,30 @@
-# vim: syntax=zsh
+source $HOME/.dotfiles/general/environment
+source $HOME/.dotfiles/general/aliases
+source $HOME/.dotfiles/zsh/antigen/antigen.zsh
 
-autoload -Uz compinit && compinit
-autoload -Uz colors && colors
+export ANTIGEN_DEFAULT_REPO_URL=https://github.com/robbyrussell/oh-my-zsh
 
-zstyle ':completion:*' menu select                          # Set menu for auto-completition
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'   # Auto-completition is case insensitive
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}       # Auto-completition with colors 
+ZSH_TMUX_AUTOSTART=true
 
-setopt autocd                                               # No need to type cd
-setopt correct                                              # Correct spelling of commands
-setopt promptsubst                                          # Enable prompt substitution
-setopt completeinword                                       # Complete from both ends
-setopt sharehistory                                         # Share history in all shells
-setopt extendedhistory                                      # Put timestamp to the history file
-setopt appendhistory                                        # Append to history
-setopt histverify                                           # Show before executing history comands
-setopt histreduceblanks                                     # Trim blanks
-setopt histignoredups                                       # Do not write duplicates in history
-setopt histreduceblanks                                     # Remove extra blanks of commands in history
-setopt interactivecomments                                  # Pound sign in interactive prompt
-setopt globdots                                             # Do not require a leading . in a filename to be matched
-setopt extendedglob                                         # Treat the #, ~ and ^ characters as part of patterns for filename generation
-setopt completealiases                                      # Auto-complete aliases
-setopt chaselinks                                           # Resolve symlinks
+antigen-use oh-my-zsh
 
-bindkey -v                                                  # Vi mode
+antigen-bundle git
+antigen-bundle pip
+antigen bundle tmux
+antigen bundle fasd
+antigen bundle sudo
+antigen bundle pep8
+antigen bundle python
+antigen-bundle vi-mode
+antigen-bundle autopep8
+antigen bundle tmuxinator
 
-# Check if environment file exists, then load it
-if [ -f $HOME/.dotfiles/general/environment ]; then
-   source $HOME/.dotfiles/general/environment
-fi
+antigen bundle chrissicool/zsh-256color
+antigen bundle tarruda/zsh-autosuggestions
+antigen bundle Tarrasch/zsh-colors
+antigen bundle s7anley/zsh-geeknote
+antigen bundle zsh-users/zsh-history-substring-search
+antigen bundle zsh-users/zsh-syntax-highlighting
 
-# Check if aliases file exists, then load it
-if [ -f $HOME/.dotfiles/general/aliases ]; then
-   source $HOME/.dotfiles/general/aliases
-fi
-
-# If functions file exists, then load it
-if [ -f $HOME/.dotfiles/general/functions ]; then
-   source $HOME/.dotfiles/general/functions
-fi
-
-# ZSH specific functions
-if [ -f $HOME/.dotfiles/zsh/functions.zsh ];then
-   source $HOME/.dotfiles/zsh/functions.zsh
-fi
-
-add_color
-
-# Setup prompts
-PS1=$'└$DASH%n@%m%# '
-RPS1=$'%?'
-PS2=''
-PS3=''
-PS4=''
-
-# FISH like syntax highlighting plugin
-source $HOME/.dotfiles/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
-
-# Override syntax highlighting style
-source $HOME/.dotfiles/zsh/zsh-syntax-override.zsh
+antigen theme steeef
+antigen-apply

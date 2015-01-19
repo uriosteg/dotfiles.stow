@@ -3,10 +3,10 @@ set -g utf8
 set-window-option -g utf8 on
 
 # Use 256 colors
-set -g default-terminal "screen-256color"
+#set -g default-terminal "screen-256color"
 
-# Set scrollback to 10,000
-set -g history-limit 10000
+# Set scrollback to 10,240
+set -g history-limit 10240
 
 # Set Ctrl-a as the default prefix and unbind C-b
 unbind C-b
@@ -14,6 +14,16 @@ set -g prefix C-a
 
 # Use vi mode
 set-window-option -g mode-keys vi
+bind-key Escape copy-mode
+bind-key -t vi-copy Escape cancel
+bind-key p paste-buffer
+bind-key -t vi-copy v begin-selection
+bind-key -t vi-copy V select-line
+bind-key -t vi-copy y copy-selection
+bind-key -t vi-copy r rectangle-toggle
+bind-key < command-prompt -p "send to tmux:" "run-shell 'tmux set-buffer -- \"$(xsel -o -b)\"'"
+bind-key > command-prompt -p "send to xsel:" "run-shell 'tmux show-buffer -- | xsel -i -b'"
+bind-key + command-prompt "delete buffer"
 
 # Use | to split vertically and - to split horizontally
 bind | split-window -h
@@ -31,51 +41,6 @@ set -g mouse-resize-pane on
 set -g mouse-select-pane on
 set -g mouse-select-window on
 
-# Customize status bar bahavior
-set-option -g status on                
-set -g status-utf8 on                  
-set -g status-interval 5               
-set -g status-justify centre           
-setw -g monitor-activity on
-set -g visual-activity on
-
-# Customize status bar appearance
-# default statusbar colors
-set-option -g status-bg colour235                       # Dark Grey
-set-option -g status-fg colour136                       # Yellow
-set-option -g status-attr default
-
-# default window title colors
-set-window-option -g window-status-fg colour60          # Light Green
-set-window-option -g window-status-bg colour236         # Dark Grey
-set-window-option -g window-status-attr dim
-
-# active window title colors
-set-window-option -g window-status-current-fg colour72  # Light Purple
-set-window-option -g window-status-current-bg colour60  # Light Green 
-set-window-option -g window-status-current-attr bright
-#set-window-option -g window-status-bell-fg colour208 #
-#set-window-option -g window-status-bell-bg colour208 #
-#set-window-option -g window-status-content-fg colour208 #
-#set-window-option -g window-status-content-bg colour208 #
-#set-window-option -g window-status-activity-fg colour9 #
-#set-window-option -g window-status-activity-bg colour9 #
-#set-window-option -g window-status-last-fg colour9 #
-#set-window-option -g window-status-last-bg colour9 #
-#set-window-option -g window-status-fg colour9 #
-
-# Pane border
-set-option -g pane-border-fg colour236                  # Dark Grey
-#set-option -g pane-border-bg colour243                  # Grey
-set-option -g pane-active-border-fg colour31            # Dark Blue
-#set-option -g pane-active-border-bg colour27            # Blue
-
-# Message text
-set-option -g message-fg colour116                      # Blueish 
-set-option -g message-bg colour235                      # Drark Grey
-set-option -g message-command-fg colour74               # Blue
-set-option -g message-command-bg colour253              # White
-
 # Pane number display
 set-option -g display-panes-active-colour colour116     # Blueish
 set-option -g display-panes-colour colour216            # Pinkysh
@@ -84,18 +49,8 @@ set-option -g display-panes-colour colour216            # Pinkysh
 set-window-option -g clock-mode-colour colour31         # Blue
 
 # Select window or pane
-set -g mode-fg colour60                                 # Light Green
-set -g mode-bg colour72                                 # Light Purple
+set -g mode-fg colour255                                # White
+set -g mode-bg colour56                                 # Purple
 
-# Customize display messages 
-set-option -g status-attr dim 
-set -g status-left-length 70
-set -g status-left-fg colour228                         # Yellow
-set -g status-left-bg colour233                         # Black
-set -g status-right-length 60
-set -g status-right-fg colour228                        # Yellow
-set -g status-right-bg colour233                        # Black
-
-# Set status message
-set -g status-left "#[fg=colour60]: #h : #[fg=colour60]#(curl icanhazip.com) #[fg=colour72]#(ifconfig en0 | grep 'inet ' | awk '{print \"en0 \" $2}') #(ifconfig en1 | grep 'inet ' | awk '{print \"en1 \" $2}') #[fg=60]#(ifconfig tun0 | grep 'inet ' | awk '{print \"vpn \" $2}') "
-set -g status-right "#[fg=colour72]#S #I:#P #[fg=colour72]:: %d %b %Y #[fg=colour72]:: %l:%M %p :: #(date -u | awk '{print $4}')::"
+# Set tmuxline
+source-file $HOME/.dotfiles/tmux/tmuxline-snapshot
