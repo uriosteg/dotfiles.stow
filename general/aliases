@@ -27,6 +27,8 @@ alias ccat='pygmentize -O style=monokai -f console256 -g'
 alias cdiff='colordiff'
 alias bye='exit'
 alias ack='ack-grep'
+alias mtail='multitail'
+alias cdiff='colordiff'
 
 # Vim aliases
 alias vi='vim'
@@ -54,3 +56,6 @@ alias .7='cd ../../../../../../..'
 alias .8='cd ../../../../../../../..'
 alias .9='cd ../../../../../../../../..'
 alias cdb='cd -'
+
+# LOL aliases
+alias sw='telnet towel.blinkenlights.nl'
