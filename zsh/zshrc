@@ -1,5 +1,6 @@
 source $HOME/.dotfiles/general/environment
 source $HOME/.dotfiles/general/aliases
+source $HOME/.dotfiles/general/functions
 source $HOME/.dotfiles/zsh/antigen/antigen.zsh
 
 export ANTIGEN_DEFAULT_REPO_URL=https://github.com/robbyrussell/oh-my-zsh
@@ -34,6 +35,10 @@ antigen-bundle zsh-users/zsh-syntax-highlighting
 
 antigen theme steeef
 
+# Bind UP and DOWN arrow keys to fix vi-mode and history-substring-search conflict
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
 # Check https://github.com/zsh-users/zsh-syntax-highlighting/tree/master/highlighters/main
 ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=160
 ZSH_HIGHLIGHT_STYLES[reserved-word]=fg=40
@@ -64,3 +69,4 @@ ZSH_HIGHLIGHT_STYLES[bracket-level-1]=fg=blue,bold
 ZSH_HIGHLIGHT_STYLES[bracket-level-2]=fg=red,bold
 ZSH_HIGHLIGHT_STYLES[bracket-level-3]=fg=yellow,bold
 ZSH_HIGHLIGHT_STYLES[bracket-level-4]=fg=magenta,bold
+
