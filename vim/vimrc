@@ -84,6 +84,7 @@ call vundle#begin('~/.vim/bundle')
       let g:airline_powerline_fonts=1
       let g:airline_theme='kolor'
    Plugin 'tmux-plugins/vim-tmux-focus-events'
+   Plugin 'ryanoasis/vim-webdevicons'
 call vundle#end()
 filetype plugin indent on
 
