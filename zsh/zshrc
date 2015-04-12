@@ -70,3 +70,6 @@ ZSH_HIGHLIGHT_STYLES[bracket-level-2]=fg=red,bold
 ZSH_HIGHLIGHT_STYLES[bracket-level-3]=fg=yellow,bold
 ZSH_HIGHLIGHT_STYLES[bracket-level-4]=fg=magenta,bold
 
+# Antigen settings
+ADOTDIR="$HOME/.antigen"
+ANTIGEN_DEFAULT_REPO_URL='https://github.com/robbyrussell/oh-my-zsh'

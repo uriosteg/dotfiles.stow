@@ -1,2 +1,7 @@
-# Ignore not related files
+# Ignore files downloaded by plugins
+
 github*
+
+tmux/plugins/*
+
+vim/bundle/*

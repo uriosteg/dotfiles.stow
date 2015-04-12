@@ -58,17 +58,17 @@ source-file $HOME/.dotfiles/tmux/tmuxline-snapshot
 # Set tmux plugins
 set -g @tpm_plugins '              \
   tmux-plugins/tpm                 \
+  tmux-plugins/tmux-copycat        \
   tmux-plugins/tmux-sensible       \
+  tmux-plugins/tmux-pain-control   \
   tmux-plugins/tmux-sessionist     \
   tmux-plugins/tmux-sidebar        \
-  tmux-plugins/tmux-copycat        \
   tmux-plugins/tmux-cpu            \
   tmux-plugins/tmux-online-status  \
   tmux-plugins/tmux-open           \
-  tmux-plugins/tmux-pain-control   \
   tmux-plugins/tmux-yank           \
   tmux-plugins/tmux-logging        \
   tmux-plugins/tmux-resurrect      \
   tmux-plugins/tmux-continuum      \
 '
-run-shell "$HOME/.dotfiles/tmux/plugins/tpm/tpm"
+run-shell '~/.dotfiles/tmux/plugins/tpm/tpm'
