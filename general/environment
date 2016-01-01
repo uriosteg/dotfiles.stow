@@ -9,6 +9,8 @@ export EDITOR='vim'
 export GIT_EDITOR="$EDITOR"
 export PAGER='most'
 export MANPAGER='most -s'
+export LESS=' -R'
+export LESSOPEN='|~/.lessfilter %s'
 
 # Set options for history
 export HISTFILE="$HOME/.${PROFILE_SHELL}_history"
@@ -40,8 +42,8 @@ else
    fi
 fi
 
-export GREP_OPTIONS='--line-number --color=auto'
-export GREP_COLORS='fn=0;38;5;63:se=1;38;5;252:sl=0;38;5;237:cx=0;38;5;246:ln=0;38;5;71:mt=1;38;5;167:rv'
+#export GREP_OPTIONS='--line-number --color=auto'
+#export GREP_COLORS='fn=0;38;5;63:se=1;38;5;252:sl=0;38;5;237:cx=0;38;5;246:ln=0;38;5;71:mt=1;38;5;167:rv'
 
 [ -e "$HOME/.dircolors" ] && DIR_COLORS="$HOME/.dircolors"
 [ -e "$DIR_COLORS" ] || DIR_COLORS=""

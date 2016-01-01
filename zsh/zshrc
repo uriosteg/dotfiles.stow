@@ -3,6 +3,7 @@ source $HOME/.dotfiles/general/aliases
 source $HOME/.dotfiles/general/functions
 source $HOME/.dotfiles/zsh/antigen/antigen.zsh
 
+eval "$(fasd --init auto)"
 export ANTIGEN_DEFAULT_REPO_URL=https://github.com/robbyrussell/oh-my-zsh
 
 ZSH_TMUX_AUTOSTART=true
@@ -17,13 +18,19 @@ antigen-bundle fasd
 antigen-bundle sudo
 antigen-bundle pep8
 antigen-bundle nyan
+antigen-bundle rsync
+antigen-bundle debian
 antigen-bundle python
+antigen-bundle extract
+antigen-bundle history
 antigen-bundle vi-mode
+antigen-bundle colorize
 antigen-bundle compleat
 antigen-bundle autopep8
 antigen-bundle tmuxinator
 antigen-bundle web-search
 antigen-bundle rand-quote
+antigen-bundle colored-man-pages
 antigen-bundle history-substring-search
 
 antigen-bundle chrissicool/zsh-256color
@@ -33,7 +40,9 @@ antigen-bundle s7anley/zsh-geeknote
 antigen-bundle zsh-users/zsh-history-substring-search
 antigen-bundle zsh-users/zsh-syntax-highlighting
 
-antigen theme steeef
+#antigen theme steeef
+#antigen theme https:://github.com/bhilburn/powerlevel9k/powerlevel9k.zsh-theme powerlevel9k
+antigen theme https://github.com/caiogondim/bullet-train-oh-my-zsh-theme bullet-train
 
 # Bind UP and DOWN arrow keys to fix vi-mode and history-substring-search conflict
 bindkey '^[[A' history-substring-search-up
