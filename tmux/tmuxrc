@@ -56,19 +56,27 @@ set -g mode-bg colour56                                 # Purple
 source-file $HOME/.dotfiles/tmux/tmuxline-snapshot
 
 # Set tmux plugins
-set -g @tpm_plugins '              \
-  tmux-plugins/tpm                 \
-  tmux-plugins/tmux-copycat        \
-  tmux-plugins/tmux-sensible       \
-  tmux-plugins/tmux-pain-control   \
-  tmux-plugins/tmux-sessionist     \
-  tmux-plugins/tmux-sidebar        \
-  tmux-plugins/tmux-cpu            \
-  tmux-plugins/tmux-online-status  \
-  tmux-plugins/tmux-open           \
-  tmux-plugins/tmux-yank           \
-  tmux-plugins/tmux-logging        \
-  tmux-plugins/tmux-resurrect      \
-  tmux-plugins/tmux-continuum      \
+set -g @tpm_plugins '                \
+  tmux-plugins/tpm                   \
+  tmux-plugins/tmux-fpp              \
+  tmux-plugins/tmux-copycat          \
+  tmux-plugins/tmux-sensible         \
+  tmux-plugins/tmux-pain-control     \
+  tmux-plugins/tmux-sessionist       \
+  tmux-plugins/tmux-sidebar          \
+  tmux-plugins/tmux-cpu              \
+  tmux-plugins/tmux-online-status    \
+  tmux-plugins/tmux-open             \
+  tmux-plugins/tmux-yank             \
+  tmux-plugins/tmux-logging          \
+  tmux-plugins/tmux-resurrect        \
+  tmux-plugins/tmux-continuum        \
+  tmux-plugins/tmux-battery          \
+  tmux-plugins/tmux-net-speed        \
+  tmux-plugins/tmux-prefix-highlight \
 '
+
+set -g @prefix_highlight_bg 'colour31'
+set -g @prefix_highlight_fg 'colour254'
+
 run-shell '~/.dotfiles/tmux/plugins/tpm/tpm'

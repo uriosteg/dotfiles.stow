@@ -88,6 +88,8 @@ call vundle#begin('~/.vim/bundle')
    Plugin 'ryanoasis/vim-webdevicons'
    Plugin 'fweep/vim-tabber'
       set tabline=%!tabber#TabLine()
+   Plugin 'mhinz/vim-startify'
+   Plugin 'nathanaelkane/vim-indent-guides'
 call vundle#end()
 filetype plugin indent on
 
