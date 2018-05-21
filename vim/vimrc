@@ -68,7 +68,7 @@ call vundle#begin('~/.vim/bundle')
    Plugin 'tomtom/tlib_vim'              
    Plugin 'garbas/vim-snipmate'
    "Plugin 'edkolev/tmuxline.vim'
-   Plugin 'neilagabriel/vim-geeknote'
+   "Plugin 'neilagabriel/vim-geeknote'
    Plugin 'Lokaltog/vim-easymotion'
    Plugin 'godlygeek/tabular'
    Plugin 'plasticboy/vim-markdown'
@@ -82,6 +82,7 @@ call vundle#begin('~/.vim/bundle')
    Plugin 'nvie/vim-flake8'
       let g:SupertabDefaultCompletitionType='context'
    Plugin 'bling/vim-airline'
+   Plugin 'vim-airline/vim-airline-themes'
       let g:airline_powerline_fonts=1
       let g:airline_theme='papercolor'
    Plugin 'tmux-plugins/vim-tmux-focus-events'
@@ -90,6 +91,7 @@ call vundle#begin('~/.vim/bundle')
       set tabline=%!tabber#TabLine()
    Plugin 'mhinz/vim-startify'
    Plugin 'nathanaelkane/vim-indent-guides'
+   Plugin 'mrtazz/simplenote.vim'
 call vundle#end()
 filetype plugin indent on
 
