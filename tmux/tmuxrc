@@ -1,6 +1,6 @@
 # Use UTF8
-set -g utf8
-set-window-option -g utf8 on
+#set -g utf8
+#set-window-option -g utf8 on
 
 # Use 256 colors
 #set -g default-terminal "screen-256color"
@@ -15,12 +15,12 @@ set -g prefix C-a
 # Use vi mode
 set-window-option -g mode-keys vi
 bind-key Escape copy-mode
-bind-key -t vi-copy Escape cancel
+bind-key -T copy-mode-vi 'Escape' send -X cancel
 bind-key p paste-buffer
-bind-key -t vi-copy v begin-selection
-bind-key -t vi-copy V select-line
-bind-key -t vi-copy y copy-selection
-bind-key -t vi-copy r rectangle-toggle
+bind-key -T copy-mode-vi 'v' send -X begin-selection
+bind-key -T copy-mode-vi 'V' send -X select-line
+bind-key -T copy-mode-vi 'y' send -X copy-selection
+bind-key -T copy-mode-vi 'r' send -X rectangle-toggle
 bind-key < command-prompt -p "send to tmux:" "run-shell 'tmux set-buffer -- \"$(xsel -o -b)\"'"
 bind-key > command-prompt -p "send to xsel:" "run-shell 'tmux show-buffer -- | xsel -i -b'"
 bind-key + command-prompt "delete buffer"
@@ -36,10 +36,7 @@ bind K resize-pane -U 5
 bind L resize-pane -R 5
 
 # Mouse options
-set -g mode-mouse on
-set -g mouse-resize-pane on
-set -g mouse-select-pane on
-set -g mouse-select-window on
+set -g mouse on
 
 # Pane number display
 set-option -g display-panes-active-colour colour116     # Blueish
