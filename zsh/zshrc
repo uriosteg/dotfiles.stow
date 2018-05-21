@@ -3,7 +3,7 @@ source $HOME/.dotfiles/general/aliases
 source $HOME/.dotfiles/general/functions
 source $HOME/.dotfiles/zsh/antigen/antigen.zsh
 
-#eval "$(fasd --init auto)"
+eval "$(fasd --init auto)"
 
 export ANTIGEN_DEFAULT_REPO_URL=https://github.com/robbyrussell/oh-my-zsh
 export ZSH_CACHE_DIR="$ZSH/cache"
@@ -14,7 +14,7 @@ antigen-use oh-my-zsh
 antigen-bundle cp
 antigen-bundle git
 antigen-bundle pip
-antigen-bundle tmux
+#antigen-bundle tmux
 antigen-bundle fasd
 antigen-bundle sudo
 antigen-bundle pep8
@@ -28,7 +28,7 @@ antigen-bundle vi-mode
 antigen-bundle colorize
 antigen-bundle compleat
 antigen-bundle autopep8
-antigen-bundle tmuxinator
+#antigen-bundle tmuxinator
 antigen-bundle web-search
 antigen-bundle rand-quote
 antigen-bundle colored-man-pages
