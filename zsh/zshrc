@@ -4,6 +4,7 @@ source $HOME/.dotfiles/general/functions
 source $HOME/.dotfiles/zsh/antigen/antigen.zsh
 
 eval "$(fasd --init auto)"
+eval "$(thefuck --alias)"
 
 export ANTIGEN_DEFAULT_REPO_URL=https://github.com/robbyrussell/oh-my-zsh
 export ZSH_CACHE_DIR="$ZSH/cache"
@@ -12,16 +13,23 @@ ZSH_TMUX_AUTOSTART=true
 antigen-use oh-my-zsh
 
 antigen-bundle cp
+antigen-bundle aws
 antigen-bundle git
+antigen-bundle gem
 antigen-bundle pip
+antigen-bundle npm
 #antigen-bundle tmux
+antigen-bundle sudo
 antigen-bundle fasd
 antigen-bundle sudo
 antigen-bundle pep8
 antigen-bundle nyan
 antigen-bundle rsync
+antigen-bundle django
 antigen-bundle debian
+antigen-bundle httpie
 antigen-bundle python
+antigen-bundle docker
 antigen-bundle extract
 antigen-bundle history
 antigen-bundle vi-mode
@@ -34,54 +42,36 @@ antigen-bundle rand-quote
 antigen-bundle colored-man-pages
 antigen-bundle history-substring-search
 
+antigen-bundle zpm-zsh/dropbox
+antigen-bundle Tarrasch/zsh-colors
+antigen-bundle s7anley/zsh-geeknote
 antigen-bundle willghatch/zsh-snippets
 antigen-bundle chrissicool/zsh-256color
 antigen-bundle tarruda/zsh-autosuggestions
-antigen-bundle Tarrasch/zsh-colors
-antigen-bundle s7anley/zsh-geeknote
+antigen-bundle felixr/docker-zsh-completion
+antigen-bundle zdharma/fast-syntax-highlighting
+#antigen-bundle zsh-users/zsh-syntax-highlighting
+antigen-bundle viasite-ansible/zsh-ansible-server
+antigen-bundle EslamElHusseiny/aws_manager_plugin
 antigen-bundle zsh-users/zsh-history-substring-search
-antigen-bundle zsh-users/zsh-syntax-highlighting
 
 #antigen theme steeef
 #antigen theme wesbos/Cobalt2-iterm cobalt2.zsh-theme
-#antigen theme bhilburn/powerlevel9k powerlevel9k.zsh-theme
-antigen theme caiogondim/bullet-train-oh-my-zsh-theme bullet-train
+antigen theme bhilburn/powerlevel9k powerlevel9k.zsh-theme
+#antigen theme caiogondim/bullet-train-oh-my-zsh-theme bullet-train
 
 # Bind UP and DOWN arrow keys to fix vi-mode and history-substring-search conflict
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
-# Check https://github.com/zsh-users/zsh-syntax-highlighting/tree/master/highlighters/main
-ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=160
-ZSH_HIGHLIGHT_STYLES[reserved-word]=fg=40
-ZSH_HIGHLIGHT_STYLES[alias]=fg=76
-ZSH_HIGHLIGHT_STYLES[builtin]=fg=37
-ZSH_HIGHLIGHT_STYLES[function]=fg=73
-ZSH_HIGHLIGHT_STYLES[command]=fg=34
-ZSH_HIGHLIGHT_STYLES[precommand]=none
-ZSH_HIGHLIGHT_STYLES[commandseparator]=none
-ZSH_HIGHLIGHT_STYLES[hashed-command]=fg=81,underline
-ZSH_HIGHLIGHT_STYLES[path]=fg=81,underline
-ZSH_HIGHLIGHT_STYLES[path_prefix]=fg=81,underline
-ZSH_HIGHLIGHT_STYLES[path_approx]=fg=81,underline
-ZSH_HIGHLIGHT_STYLES[globbing]=fg=27
-ZSH_HIGHLIGHT_STYLES[history-expansion]=fg=202
-ZSH_HIGHLIGHT_STYLES[single-hyphen-option]=fg=154
-ZSH_HIGHLIGHT_STYLES[double-hyphen-option]=fg=154
-ZSH_HIGHLIGHT_STYLES[back-quoted-argument]=fg=104
-ZSH_HIGHLIGHT_STYLES[single-quoted-argument]=fg=226
-ZSH_HIGHLIGHT_STYLES[double-quoted-argument]=fg=226
-ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]=fg=123
-ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]=fg=104
-ZSH_HIGHLIGHT_STYLES[assign]=fg=56
-ZSH_HIGHLIGHT_STYLES[default]=fg=255
-
-# Check https://github.com/zsh-users/zsh-syntax-highlighting/tree/master/highlighters/brackets
-ZSH_HIGHLIGHT_STYLES[bracket-level-1]=fg=blue,bold
-ZSH_HIGHLIGHT_STYLES[bracket-level-2]=fg=red,bold
-ZSH_HIGHLIGHT_STYLES[bracket-level-3]=fg=yellow,bold
-ZSH_HIGHLIGHT_STYLES[bracket-level-4]=fg=magenta,bold
 
 # Antigen settings
 ADOTDIR="$HOME/.antigen"
 ANTIGEN_DEFAULT_REPO_URL='https://github.com/robbyrussell/oh-my-zsh'
+
+# Powerlvevel 9k settings
+POWERLEVEL9K_MODE='nerdfont-complete'
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%F{blue}\u256D\u2500%f"
+POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%F{blue}\u2570\uf460%f "
