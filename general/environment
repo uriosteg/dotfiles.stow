@@ -8,6 +8,7 @@ fi
 export EDITOR='vim'
 export GIT_EDITOR="$EDITOR"
 export PAGER='most'
+export BAT_PAGER='less -R'
 export MANPAGER='most -s'
 export LESS=' -R'
 export LESSOPEN='|~/.lessfilter %s'
@@ -19,28 +20,12 @@ export SAVEHIST='2048'
 
 export KEYTIMEOUT='1'
 
-# Variables for shell look and feel
-if [[ $SHELL = "bin/zsh" ]];then
-   if [[ $(whoami) = "root" ]]; then
-      export PSC1='fg_bold[10]'
-      export PSC2='fg_bold[20]'
-      export PSC3='fg_bold[30]'
-   else
-      export PSC1='fg_bold[40]'
-      export PSC2='fg_bold[50]'
-      export PSC3='fg_bold[60]'
-   fi
-else
-   if [[ $(whoami) = "root" ]]; then
-      export PS_COLOR1='1;38;5;160m'  # Red
-      export PS_COLOR2='1;38;5;184m'  # Yellow
-      export PS_COLOR3='0;38;5;76m'   # Green
-   else
-      export PS_COLOR1='1;38;5;60m'   # Purple
-      export PS_COLOR2='1;38;5;72m'   # Greenish
-      export PS_COLOR3='0;38;5;116m'  # Blueish
-   fi
-fi
+# Set authenthication
+export TRELLO_KEY=$(lpass show --field=key --basic-regexp trello)
+export TRELLO_USER=$(lpass show --username --basic-regexp trello)
+export TRELLO_TOKEN=$(lpass show --field=token --basic-regexp trello)
+export SIMPLENOTE_USERNAME=$(lpass show --username  --basic-regexp simplenote)
+export SIMPLENOTE_PASSWORD=$(lpass show --password  --basic-regexp simplenote)
 
 #export GREP_OPTIONS='--line-number --color=auto'
 #export GREP_COLORS='fn=0;38;5;63:se=1;38;5;252:sl=0;38;5;237:cx=0;38;5;246:ln=0;38;5;71:mt=1;38;5;167:rv'
