@@ -25,6 +25,11 @@ bind-key < command-prompt -p "send to tmux:" "run-shell 'tmux set-buffer -- \"$(
 bind-key > command-prompt -p "send to xsel:" "run-shell 'tmux show-buffer -- | xsel -i -b'"
 bind-key + command-prompt "delete buffer"
 
+# Send command to all tmux sessions, windows and panes
+#bind-key E command-prompt -p "Command:" \
+       #"run \"tmux list-panes -a -F '##{session_name}:##{window_index}.##{pane_index}' \
+                     #| xargs -I PANE tmux send-keys -t PANE '%1' Enter\""
+
 # Use | to split vertically and - to split horizontally
 bind | split-window -h
 bind - split-window -v
@@ -56,24 +61,26 @@ source-file $HOME/.dotfiles/tmux/tmuxline-snapshot
 set -g @tpm_plugins '                \
   tmux-plugins/tpm                   \
   tmux-plugins/tmux-fpp              \
-  tmux-plugins/tmux-copycat          \
-  tmux-plugins/tmux-sensible         \
-  tmux-plugins/tmux-pain-control     \
-  tmux-plugins/tmux-sessionist       \
-  tmux-plugins/tmux-sidebar          \
   tmux-plugins/tmux-cpu              \
-  tmux-plugins/tmux-online-status    \
   tmux-plugins/tmux-open             \
   tmux-plugins/tmux-yank             \
+  tmux-plugins/tmux-copycat          \
+  tmux-plugins/tmux-battery          \
   tmux-plugins/tmux-logging          \
+  tmux-plugins/tmux-sidebar          \
+  tmux-plugins/tmux-sensible         \
   tmux-plugins/tmux-resurrect        \
   tmux-plugins/tmux-continuum        \
-  tmux-plugins/tmux-battery          \
   tmux-plugins/tmux-net-speed        \
+  tmux-plugins/tmux-sessionist       \
+  tmux-plugins/tmux-pain-control     \
+  tmux-plugins/tmux-online-status    \
+  tmux-plugins/tmux-maildir-counter  \
   tmux-plugins/tmux-prefix-highlight \
 '
 
 set -g @prefix_highlight_bg 'colour31'
 set -g @prefix_highlight_fg 'colour254'
+set -g @net_speed_format 'D:%10s  U:%10s '
 
 run-shell '~/.dotfiles/tmux/plugins/tpm/tpm'
