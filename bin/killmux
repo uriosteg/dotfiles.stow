@@ -1,6 +1,0 @@
-#!/bin/bash
-
-# This script kills all opened tmux sessions.
-# Shamelessly stolen from: http://blog.charlescy.com/blog/2013/06/05/kill-all-tmux-screen-sessions
-
-tmux ls | awk '{print $1}' | sed 's/://g' | xargs -I{} tmux kill-session -t {}
