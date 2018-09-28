@@ -27,6 +27,17 @@ export TRELLO_TOKEN=$(lpass show --field=token --basic-regexp trello)
 export SIMPLENOTE_USERNAME=$(lpass show --username  --basic-regexp simplenote)
 export SIMPLENOTE_PASSWORD=$(lpass show --password  --basic-regexp simplenote)
 
+# Set variables for tiny-care-terminal
+export TTC_BREAK='15'
+export TTC_POMODORO='45'
+export TTC_SAY_BOX='parrot'
+export TTC_REPOS="$HOME/dev"
+export TTC_REPOS_DEPTH='10'
+export TTC_UPDATE_INTERVAL='5'
+export TTC_WEATHER='guadalajara'
+export TTC_BOTS='tinycarebot,deepquestionbot,year_pogress'
+
+
 #export GREP_OPTIONS='--line-number --color=auto'
 #export GREP_COLORS='fn=0;38;5;63:se=1;38;5;252:sl=0;38;5;237:cx=0;38;5;246:ln=0;38;5;71:mt=1;38;5;167:rv'
 
