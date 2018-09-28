@@ -97,6 +97,10 @@ call vundle#begin('~/.vim/bundle')
    Plugin 'vim-scripts/vorax'
    Plugin 'lervag/vimtex'
    Plugin 'ekalinin/Dockerfile.vim'
+   Plugin 'hashivim/vim-packer'
+   Plugin 'hashivim/vim-vagrant'
+   Plugin 'hashivim/vim-terraform'
+   Plugin 'pearofducks/ansible-vim'
 call vundle#end()
 filetype plugin indent on
 
