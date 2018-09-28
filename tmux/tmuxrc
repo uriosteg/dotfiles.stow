@@ -81,6 +81,6 @@ set -g @tpm_plugins '                \
 
 set -g @prefix_highlight_bg 'colour31'
 set -g @prefix_highlight_fg 'colour254'
-set -g @net_speed_format 'D:%10s  U:%10s '
+set -g @net_speed_format '%10s %10s'
 
 run-shell '~/.dotfiles/tmux/plugins/tpm/tpm'
