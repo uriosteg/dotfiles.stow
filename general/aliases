@@ -39,6 +39,7 @@ alias viv='vim -O'
 alias vir='vim -r'
 alias svi='sudo vim'
 alias vdiff='vimdiff'
+alias vinote='vim +SimplenoteList'
 
 # Error aliases
 alias sl='ls'

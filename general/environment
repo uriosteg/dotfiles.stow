@@ -37,6 +37,11 @@ export TTC_UPDATE_INTERVAL='5'
 export TTC_WEATHER='guadalajara'
 export TTC_BOTS='tinycarebot,deepquestionbot,year_pogress'
 
+# Set variables for linuxbrew
+export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+export MANPATH="/home/linuxbrew/.linuxbrew/share/man:$MANPATH"
+export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH" 
+export HOMEBREW_GITHUB_API_TOKEN=$(lpass show --field=brew_token --basic-regexp software/github)
 
 #export GREP_OPTIONS='--line-number --color=auto'
 #export GREP_COLORS='fn=0;38;5;63:se=1;38;5;252:sl=0;38;5;237:cx=0;38;5;246:ln=0;38;5;71:mt=1;38;5;167:rv'
