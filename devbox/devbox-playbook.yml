@@ -42,10 +42,6 @@
       - grc               # output colorizer 
       - nnn               # command line file explorer 
       - tpp               # presentation tool fot he console 
-      - sc                # spread sheet  tool for the command line
-      - grc               # output colorizer
-      - nnn               # command line file explorer
-      - tpp               # presentation tool fot he console
       - mdp               # markdown presentation tool
       - g++               # c++ compiler
       - zsh               # shell
@@ -62,10 +58,10 @@
       - cloc              # code analysis tool
       - fish              # shell
       - most              # console pager
+      - atop              # performance monitor
       - ctop              # like top but for managing containers
       - htop              # ncurses better alternative to top
       - nmap              # security scanner
-      - atop              # performance monitor
       - lnav              # log colorizer
       - fasd              # directory changing tool
       - ccze              # log colorizer 
@@ -93,7 +89,6 @@
       - howdoi            # search ho to from the command line
       - cmatrix           # console screen saver
       - sysstat           # system stats tool
-      - ipython           # ipython client
       #- dbxcli            # dropbox console client
       - percol            # interactive pager and search utility
       - pdfgrep           # search pdf files from the console
@@ -104,6 +99,7 @@
       - googler           # google from the console
       - deluged           # deluge daemon  
       - neomutt           # console mail client
+      - ipython3           # ipython client
       - vitetris          # cli tetris
       - ack-grep          # perl better and faster alternative to grep
       - aptitude          # package manager for debian systems
@@ -121,18 +117,18 @@
       - multitail         # tail and colorize multiple logs
       - tmuxinator         # tmux session manager tool
       - zlib1g-dev        # required package to manage gems
-      - python-dev        # python packages for development
-      - python-pip        # python package manager
-      - python-ipdb       # ipython debugger
       - taskwarrior       # todo cli app
       - ansiweather       # print current weather in the console
+      - python3-dev        # python packages for development
+      - python3-pip        # python package manager
+      - python3-ipdb       # ipython debugger
       - texlive-full      # latex for development
       - mysql-client      # mysql console client
-      - lastpass-cli      # lastpass console client
+      #- lastpass-cli      # lastpass console client
       - speedtest-cli     # speedtest console client
       - poppler-utils     # pdftotext utility 
       - deluge-console    # deluge console client
-      - python-pygments   # highlight code
+      - python3-pygments   # highlight code
       - silversearcher-ag # better and faster alternative to grep
       - postgresql-client # postgresql console client
       - linuxbrew-wrapper # homebrew port for linux'
