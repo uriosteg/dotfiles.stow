@@ -1,14 +1,10 @@
-source $HOME/.dotfiles/general/environment
-source $HOME/.dotfiles/general/aliases
-source $HOME/.dotfiles/general/functions
-source $HOME/.dotfiles/zsh/antigen/antigen.zsh
+source $HOME/.dot/general/aliases
+source $HOME/.dot/general/functions
+source $HOME/.dot/general/environment
+source /usr/share/zsh-antigen/antigen.zsh
 
 eval "$(fasd --init auto)"
 eval "$(thefuck --alias)"
-
-export ANTIGEN_DEFAULT_REPO_URL=https://github.com/robbyrussell/oh-my-zsh
-export ZSH_CACHE_DIR="$ZSH/cache"
-ZSH_TMUX_AUTOSTART=true
 
 antigen-use oh-my-zsh
 
@@ -63,15 +59,3 @@ antigen theme bhilburn/powerlevel9k powerlevel9k.zsh-theme
 # Bind UP and DOWN arrow keys to fix vi-mode and history-substring-search conflict
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
-
-
-# Antigen settings
-ADOTDIR="$HOME/.antigen"
-ANTIGEN_DEFAULT_REPO_URL='https://github.com/robbyrussell/oh-my-zsh'
-
-# Powerlvevel 9k settings
-POWERLEVEL9K_MODE='nerdfont-complete'
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
-POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%F{blue}\u256D\u2500%f"
-POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%F{blue}\u2570\uf460%f "
