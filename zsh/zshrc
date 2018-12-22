@@ -5,55 +5,69 @@ source /usr/share/zsh-antigen/antigen.zsh
 
 eval "$(fasd --init auto)"
 eval "$(thefuck --alias)"
+#[[ -s "/etc/grc.zsh" ]] && source /etc/grc.zsh
 
 # Bind UP and DOWN arrow keys to fix vi-mode and history-substring-search conflict
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
-antigen-use oh-my-zsh
-antigen bundle <<EOBUNDLES
-   cp
-   aws
-   git
-   gem
-   pip
-   npm
-   #tmux
-   sudo
-   fasd
-   sudo
-   pep8
-   rsync
-   django
-   debian
-   httpie
-   python
-   docker
-   extract
-   history
-   vi-mode
-   colorize
-   compleat
-   autopep8
-   bundle tmuxinator
-   web-search
-   rand-quote
-   colored-man-pages
-   history-substring-search
+antigen use oh-my-zsh
+antigen bundle  cp
+antigen bundle  aws
+antigen bundle  git
+antigen bundle  gem
+antigen bundle  pip
+antigen bundle  npm
+#antigen bundle  tmux
+antigen bundle  sudo
+antigen bundle  fasd
+antigen bundle  sudo
+antigen bundle  pep8
+antigen bundle  rsync
+antigen bundle  django
+antigen bundle  debian
+antigen bundle  httpie
+antigen bundle  python
+antigen bundle  docker
+antigen bundle  extract
+antigen bundle  history
+antigen bundle  vi-mode
+antigen bundle  colorize
+antigen bundle  compleat
+antigen bundle  autopep8
+antigen bundle  bundle tmuxinator
+antigen bundle  web-search
+antigen bundle  rand-quote
+antigen bundle  colored-man-pages
+antigen bundle  history-substring-search
 
-   zpm-zsh/dropbox
-   Tarrasch/zsh-colors
-   s7anley/zsh-geeknote
-   willghatch/zsh-snippets
-   chrissicool/zsh-256color
-   tarruda/zsh-autosuggestions
-   felixr/docker-zsh-completion
-   zdharma/fast-syntax-highlighting
-   #zsh-users/zsh-syntax-highlighting
-   viasite-ansible/zsh-ansible-server
-   EslamElHusseiny/aws_manager_plugin
-   zsh-users/zsh-history-substring-search
-EOBUNDLES
+antigen bundle  zpm-zsh/ls
+antigen bundle  zpm-zsh/colors
+antigen bundle  gko/ssh-connect
+antigen bundle  Tarrasch/zsh-bd
+antigen bundle  zpm-zsh/dropbox
+antigen bundle  b4b4r07/emoji-cli
+antigen bundle  Tarrasch/zsh-colors
+#antigen bundle  h3poteto/zsh-ec2ssh
+antigen bundle  s7anley/zsh-geeknote
+antigen bundle  willghatch/zsh-snippets
+antigen bundle  chrissicool/zsh-256color
+antigen bundle  unixorn/warhol.plugin.zsh
+antigen bundle  gantsign/zsh-plugins ctop
+#antigen bundle  MichaelAquilina/zsh-emojis
+antigen bundle  tarruda/zsh-autosuggestions
+antigen bundle  felixr/docker-zsh-completion
+antigen bundle  MikeDacre/tmux-zsh-vim-titles
+antigen bundle  ascii-soup/zsh-url-highlighter
+antigen bundle  zdharma/fast-syntax-highlighting
+antigen bundle  zdharma/history-search-multi-word
+#antigen bundle  zsh-users/zsh-syntax-highlighting
+antigen bundle  viasite-ansible/zsh-ansible-server
+antigen bundle  EslamElHusseiny/aws_manager_plugin
+antigen bundle  unixorn/autoupdate-antigen.zshplugin
+antigen bundle  zsh-users/zsh-history-substring-search
+antigen bundle  MichaelAquilina/zsh-autoswitch-virtualenv
+antigen bundle  trapd00r/zsh-syntax-highlighting-filetypes
 
 #antigen theme steeef
 #antigen theme wesbos/Cobalt2-iterm cobalt2.zsh-theme
