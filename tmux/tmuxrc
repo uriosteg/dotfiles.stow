@@ -44,21 +44,22 @@ bind L resize-pane -R 5
 set -g mouse on
 
 # Pane number display
-set-option -g display-panes-active-colour colour116     # Blueish
-set-option -g display-panes-colour colour216            # Pinkysh
+#set-option -g display-panes-active-colour colour116     # Blueish
+#set-option -g display-panes-colour colour216            # Pinkysh
 
 # Clock color
-set-window-option -g clock-mode-colour colour31         # Blue
+#set-window-option -g clock-mode-colour colour31         # Blue
 
 # Select window or pane
-set -g mode-fg colour255                                # White
-set -g mode-bg colour56                                 # Purple
+#set -g mode-fg colour255                                # White
+#set -g mode-bg colour56                                 # Purple
 
 # Set tmuxline
-source-file $HOME/.dotfiles/tmux/tmuxline-snapshot
+#source-file $HOME/.dot/tmux/tmuxline-snapshot
 
 # Set tmux plugins
 set -g @tpm_plugins '                \
+  egel/tmux-gruvbox                  \
   tmux-plugins/tpm                   \
   tmux-plugins/tmux-fpp              \
   tmux-plugins/tmux-cpu              \
@@ -83,4 +84,4 @@ set -g @prefix_highlight_bg 'colour31'
 set -g @prefix_highlight_fg 'colour254'
 set -g @net_speed_format '%10s %10s'
 
-run-shell '~/.dotfiles/tmux/plugins/tpm/tpm'
+run-shell '~/.tmux/plugins/tpm/tpm'
