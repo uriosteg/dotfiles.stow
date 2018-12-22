@@ -87,8 +87,10 @@
       - awscli            # command line tool fow aws
       - httpie            # http console client for debugging 
       - howdoi            # search ho to from the command line
+      - tshark            # commandline wireshark
       - cmatrix           # console screen saver
       - sysstat           # system stats tool
+      - rebound           # fetch stackoverflow results for comiler errors
       #- dbxcli            # dropbox console client
       - percol            # interactive pager and search utility
       - pdfgrep           # search pdf files from the console
@@ -163,6 +165,7 @@
   - name: install ruby tools
     gem: name={{ item }} state=latest user_install=no
     with_items:
+      - 'vj'                 # json visualizer
       - '3llo'               # trello client for the console
       - 'facy'               # facebook client for the console
       - 'doing'              # utility to keep track of what you're doing
@@ -207,3 +210,13 @@
       - tiny-care-terminal # console dashboard 
     notify:
       - nodejs tool handler
+
+      # fx json parser
+      # fselect find files with sql like syntax
+      # streamlink - CLI for extracting streams from various websites to a video player of your choosing.
+      #transfer.sh - Quickly upload and share files from your shell.
+      #whereami - Get your geolocation information from the CLI.
+      #wttr.in - The right way to check the weather.
+      #slack-term slackdaisical
+      # timewarrior
+      # sshrc dotfiles
