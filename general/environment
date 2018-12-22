@@ -51,8 +51,8 @@ export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"
 #export HOMEBREW_GITHUB_API_TOKEN=$(lpass show --field=brew_token --basic-regexp software/github)
 
 # set grep options
-#export GREP_OPTIONS='--line-number --color=auto'
-#export GREP_COLORS='fn=0;38;5;63:se=1;38;5;252:sl=0;38;5;237:cx=0;38;5;246:ln=0;38;5;71:mt=1;38;5;167:rv'
+export GREP_OPTIONS='--line-number --color=auto'
+export GREP_COLORS='fn=0;38;5;63:se=1;38;5;252:sl=0;38;5;237:cx=0;38;5;246:ln=0;38;5;71:mt=1;38;5;167:rv'
 
 [ -e "$HOME/.dircolors" ] && DIR_COLORS="$HOME/.dircolors"
 [ -e "$DIR_COLORS" ] || DIR_COLORS=""
@@ -63,7 +63,14 @@ export TERM="screen-256color"
 
 # Powerlvevel 9k settings
 export POWERLEVEL9K_MODE='nerdfont-complete'
+export POWERLEVEL9K_SHORTEN_STRATEGY='truncate_from_right'
+export POWERLEVEL9K_SHORTEN_DELIMITER=''
+export POWERLEVEL9K_SHORTEN_DIR_LENGTH='1'
 export POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 export POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
-export POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%F{blue}\u256D\u2500%f"
+export POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context dir vcs)
+export POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv status root_indicator background_jobs history time vi_mode)
+export POWERLEVEL9K_VI_INSERT_MODE_STRING='\ue62b'
+export POWERLEVEL9K_VI_COMMAND_MODE_STRING='\ue7c5'
 export POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%F{blue}\u2570\uf460%f "
+export POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%F{blue}\u256D\u2500%f"
