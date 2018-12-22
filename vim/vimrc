@@ -56,7 +56,8 @@ call vundle#begin('~/.vim/bundle')
    Plugin 'gmarik/vundle'
    Plugin 'scrooloose/nerdtree'
    Plugin 'scrooloose/nerdcommenter'
-   Plugin 'scrooloose/syntastic'
+   "Plugin 'scrooloose/syntastic'
+   Plugin 'w0rp/ale'
    Plugin 'tpope/vim-surround'
    Plugin 'tpope/vim-fugitive'
    Plugin 'majutsushi/tagbar'
@@ -82,9 +83,10 @@ call vundle#begin('~/.vim/bundle')
    Plugin 'nvie/vim-flake8'
       let g:SupertabDefaultCompletitionType='context'
    Plugin 'bling/vim-airline'
+   Plugin 'morhetz/gruvbox'
    Plugin 'vim-airline/vim-airline-themes'
       let g:airline_powerline_fonts=1
-      let g:airline_theme='papercolor'
+         let g:airline_theme='gruvbox'
    Plugin 'tmux-plugins/vim-tmux-focus-events'
    Plugin 'ryanoasis/vim-webdevicons'
    Plugin 'fweep/vim-tabber'
@@ -110,6 +112,7 @@ set ruler
 set laststatus=2
 set cursorline
 set wildmenu
-syntax on
 set background=dark
-colorscheme skittles_dark
+
+syntax on
+colorscheme gruvbox
