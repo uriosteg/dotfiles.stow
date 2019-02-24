@@ -21,11 +21,12 @@ set smartcase
 set incsearch
 set magic
 
-" Set history to 1,000 commands
-set history=1000 
+" Set history to 2,048 commands
+set history=2048
 
 " Fix backspace
 set backspace=eol,start,indent
+set colorcolumn=79,80
 
 " No backups
 set nobackup
@@ -41,22 +42,40 @@ set tabstop=3
 " Never show mode
 set noshowmode
 
+" Python folding
+set foldmethod=indent
+set foldlevel=99
+
 " Change leader
 let mapleader=","
 let g:mapleader=","
 
+" System wide clipboard
+set clipboard=unnamed
+
 " Quick save
 nmap <leader>w :w!<cr>
+
+" Key re-mappings
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+         
+nnoremap <space> za
 
 " Setup Vundle and plugins
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin('~/.vim/bundle')
-   Plugin 'gmarik/vundle'
+   " Plugin manager
+   Plugin 'gmarik/vundle' 
    Plugin 'scrooloose/nerdtree'
+      let NERDTreeIgnore=['\.pyc$', '\~$'] " Ignore files
    Plugin 'scrooloose/nerdcommenter'
    "Plugin 'scrooloose/syntastic'
+   Plugin 'jistr/vim-nerdtree-tabs'
    Plugin 'w0rp/ale'
    Plugin 'tpope/vim-surround'
    Plugin 'tpope/vim-fugitive'
@@ -74,6 +93,7 @@ call vundle#begin('~/.vim/bundle')
    Plugin 'godlygeek/tabular'
    Plugin 'plasticboy/vim-markdown'
    Plugin 'ctrlpvim/ctrlp.vim'
+   "Plugin 'kien/ctrlp.vim'
    Plugin 'terryma/vim-multiple-cursors'
    Plugin 'vim-scripts/ag.vim'
    Plugin 'airblade/vim-gitgutter'
@@ -97,12 +117,25 @@ call vundle#begin('~/.vim/bundle')
       let g:SimplenoteUsername=$SIMPLENOTE_USERNAME
       let g:SimplenotePassword=$SIMPLENOTE_PASSWORD
    Plugin 'vim-scripts/vorax'
+
+   " Syntax  higligting and language support 
    Plugin 'lervag/vimtex'
    Plugin 'ekalinin/Dockerfile.vim'
    Plugin 'hashivim/vim-packer'
    Plugin 'hashivim/vim-vagrant'
    Plugin 'hashivim/vim-terraform'
    Plugin 'pearofducks/ansible-vim'
+   Plugin 'tmhedberg/SimpylFold'
+      let g:SimpylFold_docstring_preview=1
+   Plugin 'yuttie/comfortable-motion.vim'
+   Plugin 'mileszs/ack.vim'
+   Plugin 'kien/rainbow_parentheses.vim'
+   Plugin 'davidhalter/jedi-vim'
+   Plugin 'tweekmonster/impsort.vim'
+   Plugin 'valloric/youcompleteme'
+   Plugin 'python-mode/python-mode'
+   Plugin 'wincent/command-t'
+
 call vundle#end()
 filetype plugin indent on
 
