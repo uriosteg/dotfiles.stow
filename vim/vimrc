@@ -135,6 +135,22 @@ call vundle#begin('~/.vim/bundle')
    Plugin 'valloric/youcompleteme'
    Plugin 'python-mode/python-mode'
    Plugin 'wincent/command-t'
+   Plugin 'liuchengxu/vista.vim'
+   Plugin 'niklaas/lightline-gitdiff'
+   Plugin 'samoshkin/vim-mergetool'
+   Plugin 'paulkass/jira-vim'
+   Plugin 'neoclide/coc-highlight'
+   Plugin 'RRethy/vim-illuminate'
+   Plugin 'TaDaa/vimade'
+   Plugin 'andymass/vim-matchup'
+   Plugin 'ColinKennedy/vim-textobj-block-party'
+   Plugin 'kshenoy/vim-signature'
+   Plugin 'tmsvg/pear-tree'
+   Plugin 'christoomey/vim-tmux-navigator'
+   Plugin 'wellle/targets.vim'
+   Plugin 'jalvesaq/vimcmdline'
+   Plugin 'hanschen/vim-ipython-cell'
+   Plugin 'sheerun/vim-polyglot'
 
 call vundle#end()
 filetype plugin indent on
