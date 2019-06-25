@@ -1,7 +1,8 @@
 # vim: syntax=sh
+
 # If bin directory exists load it to $PATH
-if [ -d $HOME/bin ]; then
-   PATH="$PATH:$HOME/bin"
+if [ -d $HOME/.bin ]; then
+   PATH="$PATH:$HOME/.bin"
 fi
 
 # Set option for editor and pager
@@ -27,13 +28,6 @@ export ZSH_TMUX_AUTOSTART=true
 ADOTDIR="$HOME/.antigen"
 ANTIGEN_DEFAULT_REPO_URL='https://github.com/robbyrussell/oh-my-zsh'
 
-# Set authenthication
-#export TRELLO_KEY=$(lpass show --field=key --basic-regexp trello)
-#export TRELLO_USER=$(lpass show --username --basic-regexp trello)
-#export TRELLO_TOKEN=$(lpass show --field=token --basic-regexp trello)
-#export SIMPLENOTE_USERNAME=$(lpass show --username  --basic-regexp simplenote)
-#export SIMPLENOTE_PASSWORD=$(lpass show --password  --basic-regexp simplenote)
-
 # Set variables for tiny-care-terminal
 export TTC_BREAK='15'
 export TTC_POMODORO='45'
@@ -44,22 +38,15 @@ export TTC_UPDATE_INTERVAL='5'
 export TTC_WEATHER='guadalajara'
 export TTC_BOTS='tinycarebot,deepquestionbot,year_pogress'
 
-# Set variables for linuxbrew
-export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
-export MANPATH="/home/linuxbrew/.linuxbrew/share/man:$MANPATH"
-export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH" 
-#export HOMEBREW_GITHUB_API_TOKEN=$(lpass show --field=brew_token --basic-regexp software/github)
-
 # set grep options
 export GREP_OPTIONS='--line-number --color=auto'
 export GREP_COLORS='fn=0;38;5;63:se=1;38;5;252:sl=0;38;5;237:cx=0;38;5;246:ln=0;38;5;71:mt=1;38;5;167:rv'
 
-[ -e "$HOME/.dircolors" ] && DIR_COLORS="$HOME/.dircolors"
-[ -e "$DIR_COLORS" ] || DIR_COLORS=""
-eval "`dircolors -b $DIR_COLORS`"
-
 # Set terminal options
 export TERM="screen-256color"
+
+# Set system locale
+export LC_ALL=en_US.UTF-8
 
 # Powerlvevel 9k settings
 export POWERLEVEL9K_MODE='nerdfont-complete'

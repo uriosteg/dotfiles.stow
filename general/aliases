@@ -4,7 +4,7 @@
 alias h='history'
 alias j='jobs -l'
 alias l='ls -1F'
-alias ls='ls -F --color=auto'
+alias ls='ls -FG'
 alias ll='ls -FlAh'
 alias lt='ls -FlAht'
 alias l1='ls -Flah ..' 
