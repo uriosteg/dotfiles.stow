@@ -1,11 +1,13 @@
-source $HOME/.dot/general/aliases
-source $HOME/.dot/general/functions
-source $HOME/.dot/general/environment
-source /usr/share/zsh-antigen/antigen.zsh
+if [ -f /usr/share/zsh-antigen/antigen.zsh ]; then
+   source /usr/share/zsh-antigen/antigen.zsh
+else
+   source /usr/local/share/antigen/antigen.zsh
+fi
 
 eval "$(fasd --init auto)"
 eval "$(thefuck --alias)"
-#[[ -s "/etc/grc.zsh" ]] && source /etc/grc.zsh
+[[ -s "/etc/grc.zsh" ]] && source /etc/grc.zsh
+source <(npx --shell-auto-fallback zsh)
 
 # Bind UP and DOWN arrow keys to fix vi-mode and history-substring-search conflict
 bindkey '^[[A' history-substring-search-up
@@ -41,7 +43,7 @@ antigen bundle  rand-quote
 antigen bundle  colored-man-pages
 antigen bundle  history-substring-search
 
-antigen bundle  zpm-zsh/ls
+#antigen bundle  zpm-zsh/ls
 antigen bundle  zpm-zsh/colors
 antigen bundle  gko/ssh-connect
 antigen bundle  Tarrasch/zsh-bd
@@ -66,7 +68,7 @@ antigen bundle  viasite-ansible/zsh-ansible-server
 antigen bundle  EslamElHusseiny/aws_manager_plugin
 antigen bundle  unixorn/autoupdate-antigen.zshplugin
 antigen bundle  zsh-users/zsh-history-substring-search
-antigen bundle  MichaelAquilina/zsh-autoswitch-virtualenv
+#antigen bundle  MichaelAquilina/zsh-autoswitch-virtualenv
 antigen bundle  trapd00r/zsh-syntax-highlighting-filetypes
 
 #antigen theme steeef
@@ -75,3 +77,17 @@ antigen theme bhilburn/powerlevel9k powerlevel9k.zsh-theme
 #antigen theme caiogondim/bullet-train-oh-my-zsh-theme bullet-train
 
 antigen apply
+
+# Load personal environment
+if [ -d $HOME/.dot ]; then
+  source $HOME/.dot/general/aliases
+  source $HOME/.dot/general/functions
+  source $HOME/.dot/general/environment
+fi
+
+# Load company environment
+if [ -d $HOME/.cmpy/environ ]; then
+   source $HOME/.cmpy/environ/environment
+   source $HOME/.cmpy/environ/functions
+   source $HOME/.cmpy/environ/aliases
+fi
