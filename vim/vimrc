@@ -70,7 +70,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin('~/.vim/bundle')
    " Plugin manager
-   Plugin 'gmarik/vundle' 
+   Plugin 'gmarik/vundle'         " Plugin manager
    Plugin 'scrooloose/nerdtree'
       let NERDTreeIgnore=['\.pyc$', '\~$'] " Ignore files
    Plugin 'scrooloose/nerdcommenter'
@@ -87,11 +87,9 @@ call vundle#begin('~/.vim/bundle')
    Plugin 'MarcWeber/vim-addon-mw-utils' 
    Plugin 'tomtom/tlib_vim'              
    Plugin 'garbas/vim-snipmate'
-   "Plugin 'edkolev/tmuxline.vim'
    "Plugin 'neilagabriel/vim-geeknote'
    Plugin 'Lokaltog/vim-easymotion'
    Plugin 'godlygeek/tabular'
-   Plugin 'plasticboy/vim-markdown'
    Plugin 'ctrlpvim/ctrlp.vim'
    "Plugin 'kien/ctrlp.vim'
    Plugin 'terryma/vim-multiple-cursors'
@@ -113,18 +111,15 @@ call vundle#begin('~/.vim/bundle')
       set tabline=%!tabber#TabLine()
    Plugin 'mhinz/vim-startify'
    Plugin 'nathanaelkane/vim-indent-guides'
+   " Plugins for web applications
    Plugin 'mrtazz/simplenote.vim'
       let g:SimplenoteUsername=$SIMPLENOTE_USERNAME
       let g:SimplenotePassword=$SIMPLENOTE_PASSWORD
    Plugin 'vim-scripts/vorax'
 
    " Syntax  higligting and language support 
-   Plugin 'lervag/vimtex'
-   Plugin 'ekalinin/Dockerfile.vim'
    Plugin 'hashivim/vim-packer'
    Plugin 'hashivim/vim-vagrant'
-   Plugin 'hashivim/vim-terraform'
-   Plugin 'pearofducks/ansible-vim'
    Plugin 'tmhedberg/SimpylFold'
       let g:SimpylFold_docstring_preview=1
    Plugin 'yuttie/comfortable-motion.vim'
@@ -138,7 +133,7 @@ call vundle#begin('~/.vim/bundle')
    Plugin 'liuchengxu/vista.vim'
    Plugin 'niklaas/lightline-gitdiff'
    Plugin 'samoshkin/vim-mergetool'
-   Plugin 'paulkass/jira-vim'
+   "Plugin 'paulkass/jira-vim'
    Plugin 'neoclide/coc-highlight'
    Plugin 'RRethy/vim-illuminate'
    Plugin 'TaDaa/vimade'
