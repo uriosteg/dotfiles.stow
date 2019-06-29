@@ -70,82 +70,98 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin('~/.vim/bundle')
    " Plugin manager
-   Plugin 'gmarik/vundle'         " Plugin manager
-   Plugin 'scrooloose/nerdtree'
-      let NERDTreeIgnore=['\.pyc$', '\~$'] " Ignore files
-   Plugin 'scrooloose/nerdcommenter'
-   "Plugin 'scrooloose/syntastic'
-   Plugin 'jistr/vim-nerdtree-tabs'
-   Plugin 'w0rp/ale'
-   Plugin 'tpope/vim-surround'
-   Plugin 'tpope/vim-fugitive'
-   Plugin 'majutsushi/tagbar'
-   Plugin 'flazz/vim-colorschemes' 
-   Plugin 'vim-scripts/Gundo'
-   Plugin 'mattn/gist-vim'
-   Plugin 'mattn/webapi-vim'
-   Plugin 'MarcWeber/vim-addon-mw-utils' 
-   Plugin 'tomtom/tlib_vim'              
-   Plugin 'garbas/vim-snipmate'
-   "Plugin 'neilagabriel/vim-geeknote'
-   Plugin 'Lokaltog/vim-easymotion'
-   Plugin 'godlygeek/tabular'
-   Plugin 'ctrlpvim/ctrlp.vim'
-   "Plugin 'kien/ctrlp.vim'
-   Plugin 'terryma/vim-multiple-cursors'
-   Plugin 'vim-scripts/ag.vim'
-   Plugin 'airblade/vim-gitgutter'
-   Plugin 'myusuf3/numbers.vim'
-   Plugin 'sandeepcr529/Buffet.vim'
-   Plugin 'ervandew/supertab'
-   Plugin 'nvie/vim-flake8'
-      let g:SupertabDefaultCompletitionType='context'
-   Plugin 'bling/vim-airline'
-   Plugin 'morhetz/gruvbox'
-   Plugin 'vim-airline/vim-airline-themes'
-      let g:airline_powerline_fonts=1
-         let g:airline_theme='gruvbox'
-   Plugin 'tmux-plugins/vim-tmux-focus-events'
-   Plugin 'ryanoasis/vim-webdevicons'
-   Plugin 'fweep/vim-tabber'
-      set tabline=%!tabber#TabLine()
-   Plugin 'mhinz/vim-startify'
-   Plugin 'nathanaelkane/vim-indent-guides'
-   " Plugins for web applications
-   Plugin 'mrtazz/simplenote.vim'
+   Plugin 'gmarik/vundle'                         " plugin manager
+
+   " Plugin libraries for plugins
+   Plugin 'tomtom/tlib_vim'                       " provides utility functions
+   Plugin 'mattn/webapi-vim'                      " webapi utility functions
+   Plugin 'marcweber/vim-addon-mw-utils'          " interpret a file by function and cache
+
+   " Search plugins
+   Plugin 'mileszs/ack.vim'                       " quickly serah within vim
+   Plugin 'wincent/command-t'                     " fast file navigation for vim
+   Plugin 'ctrlpvim/ctrlp.vim'                    " fuzzy finder for vim
+   Plugin 'sandeepcr529/buffet.vim'               " buffer list for switching and managing buffers
+
+   " Programming tools
+   Plugin 'vim-scripts/vorax'                     " use vim as an oracle client
+   Plugin 'garbas/vim-snipmate'                   " snippet tool
+   Plugin 'jalvesaq/vimcmdline'                   " send lines to interpreter
+
+   " Tools for git
+   Plugin 'tpope/vim-fugitive'                    " git wrapper for vim
+   Plugin 'samoshkin/vim-mergetool'               " use vim to resolve merge conflicts
+
+   " Language support plugins
+   Plugin 'hashivim/vim-packer'                   " packer language support
+   Plugin 'hashivim/vim-vagrant'                  " vagrantfile language support
+   Plugin 'sheerun/vim-polyglot'                  " multiple language support
+   Plugin 'python-mode/python-mode'               " use vim as a python IDE
+   Plugin 'hanschen/vim-ipython-cell'             " run ipython on current line
+
+   " Motion plugins
+   Plugin 'wellle/targets.vim'                    " add vim text objects
+   Plugin 'andymass/vim-matchup'                  " extends vim's % motion to language-specific words
+   Plugin 'kana/vim-textobj-user'                 " create vim text objects
+   Plugin 'easymotion/vim-easymotion'             " move faster around vim
+   Plugin 'yuttie/comfortable-motion.vim'         " smooth scrolling
+   Plugin 'christoomey/vim-tmux-navigator'        " motions for using tmux
+   Plugin 'colinkennedy/vim-textobj-block-party'  " vim motions for python
+
+   " Web applications plugins
+   "Plugin 'paulkass/jira-vim'                    " use jira from vim
+   Plugin 'mattn/gist-vim'                        " upload snippets to github
+   Plugin 'mrtazz/simplenote.vim'                 " use simplenote from vim
       let g:SimplenoteUsername=$SIMPLENOTE_USERNAME
       let g:SimplenotePassword=$SIMPLENOTE_PASSWORD
-   Plugin 'vim-scripts/vorax'
+   "Plugin 'neilagabriel/vim-geeknote'            " use geeknote from vim
+   
+   " Appearance plugins
+   Plugin 'tadaa/vimade'                          " fades inactive biffers
+   Plugin 'morhetz/gruvbox'                       " gruvbox theme for vim
+   Plugin 'fweep/vim-tabber'                      " labeling and manipulating tabs
+      set tabline=%!tabber#TabLine()
+   "Plugin 'majutsushi/tagbar'                    " tags viewer
+   Plugin 'vim-scripts/gundo'                     " visualize vim undo tree
+   Plugin 'bling/vim-airline'                     " show status bar on vim
+   Plugin 'mhinz/vim-startify'                    " show a start screen on vim
+   Plugin 'myusuf3/numbers.vim'                   " show relative numbers
+   Plugin 'liuchengxu/vista.vim'                  " tags viewer
+   Plugin 'kshenoy/vim-signature'                 " add visual markers to the buffer
+   Plugin 'rrethy/vim-illuminate'                 " automatically highlighting other uses of the current word
+   Plugin 'neoclide/coc-highlight'                " current word highlighter
+   Plugin 'airblade/vim-gitgutter'                " show git modifications
+   "Plugin 'niklaas/lightline-gitdiff'            " show gitdiff on lightline
+   Plugin 'vim-airline/vim-airline-themes'        " themes for vim-airline
+      let g:airline_powerline_fonts=1             " enable powerline fonts
+         let g:airline_theme='gruvbox'            " set airline theme to gruvbox
+   Plugin 'scrooloose/nerdtree'                   " show navigation tree
+      let NERDTreeIgnore=['\.pyc$', '\~$']        " ignore files
+   Plugin 'flazz/vim-colorschemes'                " load vim colorschemes
+   Plugin 'jistr/vim-nerdtree-tabs'               " use tabs in nerdtree
+   Plugin 'ryanoasis/vim-webdevicons'             " use better icons in vim
+   Plugin 'kien/rainbow_parentheses.vim'          " highlight parentheses
+   Plugin 'nathanaelkane/vim-indent-guides'       " show indent guides
+   Plugin 'tmux-plugins/vim-tmux-focus-events'    " terminal vim and tmux work better
+   
+   " Linter plugins
+   Plugin 'w0rp/ale'                              " syntax checking and semantic errors
+   Plugin 'ervandew/supertab'                     " autocomplete with tab
+   "Plugin 'scrooloose/syntastic'                 " syntax checking for vim
+   Plugin 'davidhalter/jedi-vim'                  " vim auto-completition
+   Plugin 'valloric/youcompleteme'                " code-completition engine
 
-   " Syntax  higligting and language support 
-   Plugin 'hashivim/vim-packer'
-   Plugin 'hashivim/vim-vagrant'
-   Plugin 'tmhedberg/SimpylFold'
+   " Formatting plugins
+   Plugin 'nvie/vim-flake8'                       " flake 8 style
+      let g:SupertabDefaultCompletitionType='context'
+   Plugin 'tmsvg/pear-tree'                       " close open brackets
+   Plugin 'godlygeek/tabular'                     " text filtering and alignment 
+   Plugin 'tpope/vim-surround'                    " sorround vim objects
+   Plugin 'tmhedberg/simpylfold'                  " code folding for python
       let g:SimpylFold_docstring_preview=1
-   Plugin 'yuttie/comfortable-motion.vim'
-   Plugin 'mileszs/ack.vim'
-   Plugin 'kien/rainbow_parentheses.vim'
-   Plugin 'davidhalter/jedi-vim'
-   Plugin 'tweekmonster/impsort.vim'
-   Plugin 'valloric/youcompleteme'
-   Plugin 'python-mode/python-mode'
-   Plugin 'wincent/command-t'
-   Plugin 'liuchengxu/vista.vim'
-   Plugin 'niklaas/lightline-gitdiff'
-   Plugin 'samoshkin/vim-mergetool'
-   "Plugin 'paulkass/jira-vim'
-   Plugin 'neoclide/coc-highlight'
-   Plugin 'RRethy/vim-illuminate'
-   Plugin 'TaDaa/vimade'
-   Plugin 'andymass/vim-matchup'
-   Plugin 'ColinKennedy/vim-textobj-block-party'
-   Plugin 'kshenoy/vim-signature'
-   Plugin 'tmsvg/pear-tree'
-   Plugin 'christoomey/vim-tmux-navigator'
-   Plugin 'wellle/targets.vim'
-   Plugin 'jalvesaq/vimcmdline'
-   Plugin 'hanschen/vim-ipython-cell'
-   Plugin 'sheerun/vim-polyglot'
+   Plugin 'scrooloose/nerdcommenter'              " comment lines
+   Plugin 'tweekmonster/impsort.vim'              " sort python imports
+   Plugin 'terryma/vim-multiple-cursors'          " use multiple cursors
 
 call vundle#end()
 filetype plugin indent on
