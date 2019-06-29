@@ -1,9 +1,7 @@
 # vim: syntax=sh
 
-# If bin directory exists load it to $PATH
-if [ -d $HOME/.bin ]; then
-   PATH="$PATH:$HOME/.bin"
-fi
+# Add aditional paths for searching binaries
+export PATH="$HOME/.local/bin:$PATH"
 
 # Set option for editor and pager
 export EDITOR='vim'
