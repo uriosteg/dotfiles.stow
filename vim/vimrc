@@ -77,6 +77,10 @@ call vundle#begin('~/.vim/bundle')
    Plugin 'mattn/webapi-vim'                      " webapi utility functions
    Plugin 'marcweber/vim-addon-mw-utils'          " interpret a file by function and cache
 
+   " Tools for git
+   Plugin 'tpope/vim-fugitive'                    " git wrapper for vim
+   Plugin 'samoshkin/vim-mergetool'               " use vim to resolve merge conflicts
+
    " Search plugins
    Plugin 'mileszs/ack.vim'                       " quickly serah within vim
    Plugin 'wincent/command-t'                     " fast file navigation for vim
@@ -87,10 +91,14 @@ call vundle#begin('~/.vim/bundle')
    Plugin 'vim-scripts/vorax'                     " use vim as an oracle client
    Plugin 'garbas/vim-snipmate'                   " snippet tool
    Plugin 'jalvesaq/vimcmdline'                   " send lines to interpreter
+   "Plugin 'sinetoami/lightline-neomake'          " neomake for vim
 
-   " Tools for git
-   Plugin 'tpope/vim-fugitive'                    " git wrapper for vim
-   Plugin 'samoshkin/vim-mergetool'               " use vim to resolve merge conflicts
+   " Linter plugins
+   Plugin 'w0rp/ale'                              " syntax checking and semantic errors
+   Plugin 'ervandew/supertab'                     " autocomplete with tab
+   "Plugin 'scrooloose/syntastic'                 " syntax checking for vim
+   Plugin 'davidhalter/jedi-vim'                  " vim auto-completition
+   Plugin 'valloric/youcompleteme'                " code-completition engine
 
    " Language support plugins
    Plugin 'hashivim/vim-packer'                   " packer language support
@@ -116,6 +124,18 @@ call vundle#begin('~/.vim/bundle')
       let g:SimplenotePassword=$SIMPLENOTE_PASSWORD
    "Plugin 'neilagabriel/vim-geeknote'            " use geeknote from vim
    
+   " Formatting plugins
+   Plugin 'nvie/vim-flake8'                       " flake 8 style
+      let g:SupertabDefaultCompletitionType='context'
+   Plugin 'tmsvg/pear-tree'                       " close open brackets
+   Plugin 'godlygeek/tabular'                     " text filtering and alignment 
+   Plugin 'tpope/vim-surround'                    " sorround vim objects
+   Plugin 'tmhedberg/simpylfold'                  " code folding for python
+      let g:SimpylFold_docstring_preview=1
+   Plugin 'scrooloose/nerdcommenter'              " comment lines
+   Plugin 'tweekmonster/impsort.vim'              " sort python imports
+   Plugin 'terryma/vim-multiple-cursors'          " use multiple cursors
+
    " Appearance plugins
    Plugin 'tadaa/vimade'                          " fades inactive biffers
    Plugin 'morhetz/gruvbox'                       " gruvbox theme for vim
@@ -125,8 +145,13 @@ call vundle#begin('~/.vim/bundle')
    Plugin 'vim-scripts/gundo'                     " visualize vim undo tree
    Plugin 'bling/vim-airline'                     " show status bar on vim
    Plugin 'mhinz/vim-startify'                    " show a start screen on vim
+   Plugin 'sainnhe/artify.vim'                    " change the display of characters
    Plugin 'myusuf3/numbers.vim'                   " show relative numbers
    Plugin 'liuchengxu/vista.vim'                  " tags viewer
+   "Plugin 'itchyny/lightline.vim'                " lightline for vim
+   "Plugin 'itchyny/vim-gitbranch'                " provide the current branchname
+   "Plugin 'maximbaz/lightline-ale'               " ale for lightline
+   "Plugin 'rmolin88/pomodoro.vim'                " pomodoro for vim
    Plugin 'kshenoy/vim-signature'                 " add visual markers to the buffer
    Plugin 'rrethy/vim-illuminate'                 " automatically highlighting other uses of the current word
    Plugin 'neoclide/coc-highlight'                " current word highlighter
@@ -142,26 +167,8 @@ call vundle#begin('~/.vim/bundle')
    Plugin 'ryanoasis/vim-webdevicons'             " use better icons in vim
    Plugin 'kien/rainbow_parentheses.vim'          " highlight parentheses
    Plugin 'nathanaelkane/vim-indent-guides'       " show indent guides
+   "Plugin 'palpatineli/lightline-lsc-nvim'       " lsc for lightline
    Plugin 'tmux-plugins/vim-tmux-focus-events'    " terminal vim and tmux work better
-   
-   " Linter plugins
-   Plugin 'w0rp/ale'                              " syntax checking and semantic errors
-   Plugin 'ervandew/supertab'                     " autocomplete with tab
-   "Plugin 'scrooloose/syntastic'                 " syntax checking for vim
-   Plugin 'davidhalter/jedi-vim'                  " vim auto-completition
-   Plugin 'valloric/youcompleteme'                " code-completition engine
-
-   " Formatting plugins
-   Plugin 'nvie/vim-flake8'                       " flake 8 style
-      let g:SupertabDefaultCompletitionType='context'
-   Plugin 'tmsvg/pear-tree'                       " close open brackets
-   Plugin 'godlygeek/tabular'                     " text filtering and alignment 
-   Plugin 'tpope/vim-surround'                    " sorround vim objects
-   Plugin 'tmhedberg/simpylfold'                  " code folding for python
-      let g:SimpylFold_docstring_preview=1
-   Plugin 'scrooloose/nerdcommenter'              " comment lines
-   Plugin 'tweekmonster/impsort.vim'              " sort python imports
-   Plugin 'terryma/vim-multiple-cursors'          " use multiple cursors
 
 call vundle#end()
 filetype plugin indent on
