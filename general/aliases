@@ -28,11 +28,12 @@ alias ccat='pygmentize -O style=monokai -f console256 -g'
 alias cdiff='colordiff'
 alias bye='exit'
 alias ack='ack-grep'
-alias tldr='tldr --theme base16'
+alias tldr='tldr --platform=osx'
 alias mtail='multitail'
 alias cdiff='colordiff'
 alias cls='colorls'
 alias cll='colorls -la'
+alias rwm='brew services restart skhd && brew services restart yabai'
 
 # Vim aliases
 alias vi='vim'
