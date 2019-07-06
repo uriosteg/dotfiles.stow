@@ -14,8 +14,8 @@ export LESSOPEN='|~/.lessfilter %s'
 
 # Set options for history
 export HISTFILE="$HOME/.${PROFILE_SHELL}_history"
-export HISTSIZE='2048'
-export SAVEHIST='2048'
+export HISTSIZE='10240'
+export SAVEHIST='10240'
 export KEYTIMEOUT='1'
 
 # Set options for zsh
