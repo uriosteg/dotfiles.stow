@@ -7,73 +7,93 @@ fi
 eval "$(fasd --init auto)"
 eval "$(thefuck --alias)"
 [[ -s "/etc/grc.zsh" ]] && source /etc/grc.zsh
-source <(npx --shell-auto-fallback zsh)
+# source <(npx --shell-auto-fallback zsh)
 
 # Bind UP and DOWN arrow keys to fix vi-mode and history-substring-search conflict
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
 antigen use oh-my-zsh
-antigen bundle  cp
-antigen bundle  aws
-antigen bundle  git
-antigen bundle  gem
-antigen bundle  pip
-antigen bundle  npm
-#antigen bundle  tmux
-antigen bundle  sudo
-antigen bundle  fasd
-antigen bundle  sudo
-antigen bundle  pep8
-antigen bundle  rsync
-antigen bundle  django
-antigen bundle  debian
-antigen bundle  httpie
-antigen bundle  python
-antigen bundle  docker
-antigen bundle  extract
-antigen bundle  history
-antigen bundle  vi-mode
-antigen bundle  colorize
-antigen bundle  compleat
-antigen bundle  autopep8
-antigen bundle  bundle tmuxinator
-antigen bundle  web-search
-antigen bundle  rand-quote
-antigen bundle  colored-man-pages
-antigen bundle  history-substring-search
+antigen bundle fd                                          # fd completion
+antigen bundle cp                                          # defines a cpv function that uses rsync
+antigen bundle osx                                         # utilities for working on osx
+antigen bundle fzf                                         # fzf completion
+antigen bundle tig                                         # tig aliases
+antigen bundle aws                                         # aws completion
+antigen bundle git                                         # aliases for git
+antigen bundle adb                                         # adb completion
+antigen bundle gem                                         # gem completion
+antigen bundle pip                                         # pip completion
+antigen bundle npm                                         # npm completion
+#antigen bundle tmux                                       # auto-attach tmux at session start
+antigen bundle jira                                        # jira plugin
+antigen bundle mosh                                        # mosh completion
+antigen bundle sudo                                        # esc twice to sudo
+antigen bundle fasd                                        # aliases and initialization for fasd
+antigen bundle sudo                                        # prefix your current or previous commands with sudo
+antigen bundle sfdx                                        # sfdx completion
+antigen bundle pep8                                        # pep8 python coding style completion
+antigen bundle brew                                        # homebrew completion
+antigen bundle xcode                                       # zcode utilities
+antigen bundle rsync                                       # aliases for rsync
+antigen bundle emoji                                       # support unicode emoji
+antigen bundle heroku                                      # heroku-cli completion
+#antigen bundle django                                     # django completion
+#antigen bundle debian                                     # aliases for debian
+antigen bundle httpie                                      # httpie comletion
+antigen bundle iterm2                                      # iterm2 functions
+antigen bundle python                                      # aliases for python
+antigen bundle docker                                      # docker completion
+antigen bundle extract                                     # unzip any file
+antigen bundle history                                     # keyboard shortcuts for navigating directory history
+antigen bundle vi-mode                                     # vi like zsh
+antigen bundle ripgrep                                     # ripgrep comletion
+antigen bundle colorize                                    # syntax-highlight file contents
+antigen bundle compleat                                    # compleat common commands
+antigen bundle autopep8                                    # python file formatting completion
+#antigen bundle keychain                                   # use keychain session
+antigen bundle redis-cli                                   # redis-cli completion
+antigen bundle tmuxinator                                  # tmuxinator completion
+antigen bundle web-search                                  # aliases for searching
+antigen bundle zsh_reload                                  # reload zsh
+antigen bundle rand-quote                                  # random quote
+antigen bundle taskwarrior                                 # taskwarrior completion
+antigen bundle fancy-ctrl-z                                # use ctrl-z to switch to vim
+antigen bundle colored-man-pages                           # color man pages 
+antigen bundle zsh-navigation-tools                        # tools for history
+antigen bundle history-substring-search                    # history search 
 
-#antigen bundle  zpm-zsh/ls
-antigen bundle  zpm-zsh/colors
-antigen bundle  gko/ssh-connect
-antigen bundle  Tarrasch/zsh-bd
-antigen bundle  zpm-zsh/dropbox
-antigen bundle  b4b4r07/emoji-cli
-antigen bundle  Tarrasch/zsh-colors
-#antigen bundle  h3poteto/zsh-ec2ssh
-antigen bundle  s7anley/zsh-geeknote
-antigen bundle  willghatch/zsh-snippets
-antigen bundle  chrissicool/zsh-256color
-antigen bundle  unixorn/warhol.plugin.zsh
-antigen bundle  gantsign/zsh-plugins ctop
-#antigen bundle  MichaelAquilina/zsh-emojis
-antigen bundle  tarruda/zsh-autosuggestions
-antigen bundle  felixr/docker-zsh-completion
-antigen bundle  MikeDacre/tmux-zsh-vim-titles
-antigen bundle  ascii-soup/zsh-url-highlighter
-antigen bundle  zdharma/fast-syntax-highlighting
-antigen bundle  zdharma/history-search-multi-word
-#antigen bundle  zsh-users/zsh-syntax-highlighting
-antigen bundle  viasite-ansible/zsh-ansible-server
-antigen bundle  EslamElHusseiny/aws_manager_plugin
-antigen bundle  unixorn/autoupdate-antigen.zshplugin
-antigen bundle  zsh-users/zsh-history-substring-search
-#antigen bundle  MichaelAquilina/zsh-autoswitch-virtualenv
-antigen bundle  trapd00r/zsh-syntax-highlighting-filetypes
+#antigen bundle  zpm-zsh/ls                                # 
+antigen bundle  zpm-zsh/colors                             #
+antigen bundle  gko/ssh-connect                            #
+antigen bundle  Tarrasch/zsh-bd                            #
+antigen bundle  zpm-zsh/dropbox                            #
+antigen bundle  b4b4r07/emoji-cli                          #
+antigen bundle  Tarrasch/zsh-colors                        #
+#antigen bundle  h3poteto/zsh-ec2ssh                       #
+antigen bundle  s7anley/zsh-geeknote                       #
+antigen bundle  willghatch/zsh-snippets                    #
+antigen bundle  chrissicool/zsh-256color                   #
+antigen bundle  unixorn/warhol.plugin.zsh                  #
+antigen bundle  gantsign/zsh-plugins ctop                  #
+#antigen bundle  MichaelAquilina/zsh-emojis                #
+antigen bundle  tarruda/zsh-autosuggestions                #
+antigen bundle  felixr/docker-zsh-completion               #
+antigen bundle  MikeDacre/tmux-zsh-vim-titles              #
+antigen bundle  ascii-soup/zsh-url-highlighter             #
+antigen bundle  zdharma/fast-syntax-highlighting           #
+antigen bundle  zdharma/history-search-multi-word          #
+#antigen bundle  zsh-users/zsh-syntax-highlighting         #
+antigen bundle  viasite-ansible/zsh-ansible-server         #
+antigen bundle  EslamElHusseiny/aws_manager_plugin         #
+antigen bundle  unixorn/autoupdate-antigen.zshplugin       #
+antigen bundle  zsh-users/zsh-history-substring-search     #
+#antigen bundle  MichaelAquilina/zsh-autoswitch-virtualenv #
+antigen bundle  trapd00r/zsh-syntax-highlighting-filetypes #
 
 #antigen theme steeef
 #antigen theme wesbos/Cobalt2-iterm cobalt2.zsh-theme
-antigen theme bhilburn/powerlevel9k powerlevel9k.zsh-theme
+antigen theme bhilburn/powerlevel9k powerlevel9k.zsh-theme          
 #antigen theme caiogondim/bullet-train-oh-my-zsh-theme bullet-train
 
 antigen apply
