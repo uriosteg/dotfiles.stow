@@ -1,4 +1,6 @@
 # Use UTF8
+# vi:syntax=sh
+
 #set -g utf8
 #set-window-option -g utf8 on
 
@@ -25,11 +27,6 @@ bind-key < command-prompt -p "send to tmux:" "run-shell 'tmux set-buffer -- \"$(
 bind-key > command-prompt -p "send to xsel:" "run-shell 'tmux show-buffer -- | xsel -i -b'"
 bind-key + command-prompt "delete buffer"
 
-# Send command to all tmux sessions, windows and panes
-#bind-key E command-prompt -p "Command:" \
-       #"run \"tmux list-panes -a -F '##{session_name}:##{window_index}.##{pane_index}' \
-                     #| xargs -I PANE tmux send-keys -t PANE '%1' Enter\""
-
 # Use | to split vertically and - to split horizontally
 bind | split-window -h
 bind - split-window -v
@@ -42,20 +39,6 @@ bind L resize-pane -R 5
 
 # Mouse options
 set -g mouse on
-
-# Pane number display
-#set-option -g display-panes-active-colour colour116     # Blueish
-#set-option -g display-panes-colour colour216            # Pinkysh
-
-# Clock color
-#set-window-option -g clock-mode-colour colour31         # Blue
-
-# Select window or pane
-#set -g mode-fg colour255                                # White
-#set -g mode-bg colour56                                 # Purple
-
-# Set tmuxline
-#source-file $HOME/.dot/tmux/tmuxline-snapshot
 
 # Set tmux plugins
 set -g @tpm_plugins '                \
