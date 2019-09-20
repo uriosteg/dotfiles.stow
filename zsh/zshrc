@@ -57,6 +57,7 @@ antigen bundle autopep8                                    # python file formatt
 #antigen bundle keychain                                   # use keychain session
 antigen bundle redis-cli                                   # redis-cli completion
 antigen bundle tmuxinator                                  # tmuxinator completion
+antigen bundle virtualenv                                  # shows virtualenv in prompt
 antigen bundle web-search                                  # aliases for searching
 antigen bundle zsh_reload                                  # reload zsh
 antigen bundle rand-quote                                  # random quote
