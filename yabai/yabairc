@@ -30,6 +30,9 @@ yabai -m config auto_balance                 off
 yabai -m config mouse_modifier               cmd 
 yabai -m config mouse_action1                move
 yabai -m config mouse_action2                resize
+yabai -m config window_opacity               on
+yabai -m config active_window_opacity        0.85
+yabai -m config normal_window_opacity        0.70
 
 # general space settings
 yabai -m config layout                       bsp
@@ -44,7 +47,6 @@ yabai -m config window_gap                   10
 #yabai -m rule --add app="Microsoft Outlook"    space=1
 #yabai -m rule --add app="Microsoft Teams"      space=2
 #yabai -m rule --add app="Slack"                space=2
-#yabai -m rule --add app="Sblack"               space=2
 #yabai -m rule --add app="Spotify"              space=3
 #yabai -m rule --add app="WhatsApp"             space=3
 #yabai -m rule --add app="Safari"               space=6
