@@ -1,0 +1,9 @@
+- repo: tadaa/vimade
+- repo: nvie/vim-flake8
+  hook_source: let g:SupertabDefaultCompletitionType='context'
+- repo: fweep/vim-tabber
+  hook_source: set tabline=%!tabber#TabLine()
+- repo: sainnhe/artify.vim
+- repo: jalvesaq/vimcmdline
+- repo: neoclide/coc-highlight
+- repo: vim-syntastic/syntastic
