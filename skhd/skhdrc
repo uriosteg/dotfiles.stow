@@ -46,52 +46,61 @@ cmd + alt - n : yabai -m space --create;\
 cmd + alt - w : yabai -m space --destroy
 
 # fast focus desktop
-cmd + alt - x : yabai -m space --focus last
-cmd + alt - z : yabai -m space --focus prev
-cmd + alt - c : yabai -m space --focus next
-cmd + alt - 1 : yabai -m space --focus 1
-cmd + alt - 2 : yabai -m space --focus 2
-cmd + alt - 3 : yabai -m space --focus 3
-cmd + alt - 4 : yabai -m space --focus 4
-cmd + alt - 5 : yabai -m space --focus 5
-cmd + alt - 6 : yabai -m space --focus 6
-cmd + alt - 7 : yabai -m space --focus 7
-cmd + alt - 8 : yabai -m space --focus 8
-cmd + alt - 9 : yabai -m space --focus 9
-cmd + alt - 0 : yabai -m space --focus 10
-#cmd + alt - 1 - 1 : yabai -m space --focus 11
-#cmd + alt - 2 - 2 : yabai -m space --focus 12
-#cmd + alt - 3 - 3 : yabai -m space --focus 13
-#cmd + alt - 4 - 4 : yabai -m space --focus 14
-#cmd + alt - 5 - 5 : yabai -m space --focus 15
-#cmd + alt - 6 - 6 : yabai -m space --focus 16
+cmd + lalt - x : yabai -m space --focus last
+cmd + lalt - z : yabai -m space --focus prev
+cmd + lalt - c : yabai -m space --focus next
+cmd + lalt - 1 : yabai -m space --focus 1
+cmd + lalt - 2 : yabai -m space --focus 2
+cmd + lalt - 3 : yabai -m space --focus 3
+cmd + lalt - 4 : yabai -m space --focus 4
+cmd + lalt - 5 : yabai -m space --focus 5
+cmd + lalt - 6 : yabai -m space --focus 6
+cmd + lalt - 7 : yabai -m space --focus 7
+cmd + lalt - 8 : yabai -m space --focus 8
+cmd + lalt - 9 : yabai -m space --focus 9
+cmd + lalt - 0 : yabai -m space --focus 10
+cmd + ralt - 1 : yabai -m space --focus 11
+cmd + ralt - 1 : yabai -m space --focus 12
+cmd + ralt - 1 : yabai -m space --focus 13
+cmd + ralt - 1 : yabai -m space --focus 14
+cmd + ralt - 1 : yabai -m space --focus 15
+cmd + ralt - 1 : yabai -m space --focus 16
+cmd + ralt - 1 : yabai -m space --focus 17
+cmd + ralt - 1 : yabai -m space --focus 18
+cmd + ralt - 1 : yabai -m space --focus 19
+cmd + ralt - 1 : yabai -m space --focus 20
 
 # send window to desktop and follow focus
-shift + cmd - x : yabai -m window --space last; yabai -m space --focus last
-shift + cmd - z : yabai -m window --space prev; yabai -m space --focus prev
-shift + cmd - c : yabai -m window --space next; yabai -m space --focus next
-shift + cmd - 1 : yabai -m window --space  1; yabai -m space --focus 1
-shift + cmd - 2 : yabai -m window --space  2; yabai -m space --focus 2
-shift + cmd - 3 : yabai -m window --space  3; yabai -m space --focus 3
-shift + cmd - 4 : yabai -m window --space  4; yabai -m space --focus 4
-shift + cmd - 5 : yabai -m window --space  5; yabai -m space --focus 5
-shift + cmd - 6 : yabai -m window --space  6; yabai -m space --focus 6
-shift + cmd - 7 : yabai -m window --space  7; yabai -m space --focus 7
-shift + cmd - 8 : yabai -m window --space  8; yabai -m space --focus 8
-shift + cmd - 9 : yabai -m window --space  9; yabai -m space --focus 9
-shift + cmd - 0 : yabai -m window --space 10; yabai -m space --focus 10
-#shift + cmd - 1 - 1 : yabai -m window --space 10; yabai -m space --focus 11
-#shift + cmd - 2 - 2 : yabai -m window --space 10; yabai -m space --focus 12
-#shift + cmd - 3 - 3 : yabai -m window --space 10; yabai -m space --focus 13
-#shift + cmd - 4 - 4 : yabai -m window --space 10; yabai -m space --focus 14
-#shift + cmd - 5 - 5 : yabai -m window --space 10; yabai -m space --focus 15
-#shift + cmd - 6 - 6 : yabai -m window --space 10; yabai -m space --focus 16
+lshift + cmd - x : yabai -m window --space last; yabai -m space --focus last
+lshift + cmd - z : yabai -m window --space prev; yabai -m space --focus prev
+lshift + cmd - c : yabai -m window --space next; yabai -m space --focus next
+lshift + cmd - 1 : yabai -m window --space  1; yabai -m space --focus 1
+lshift + cmd - 2 : yabai -m window --space  2; yabai -m space --focus 2
+lshift + cmd - 3 : yabai -m window --space  3; yabai -m space --focus 3
+lshift + cmd - 4 : yabai -m window --space  4; yabai -m space --focus 4
+lshift + cmd - 5 : yabai -m window --space  5; yabai -m space --focus 5
+lshift + cmd - 6 : yabai -m window --space  6; yabai -m space --focus 6
+lshift + cmd - 7 : yabai -m window --space  7; yabai -m space --focus 7
+lshift + cmd - 8 : yabai -m window --space  8; yabai -m space --focus 8
+lshift + cmd - 9 : yabai -m window --space  9; yabai -m space --focus 9
+lshift + cmd - 0 : yabai -m window --space 10; yabai -m space --focus 10
+rshift + cmd - 1 : yabai -m window --space 10; yabai -m space --focus 11
+rshift + cmd - 2 : yabai -m window --space 10; yabai -m space --focus 12
+rshift + cmd - 3 : yabai -m window --space 10; yabai -m space --focus 13
+rshift + cmd - 4 : yabai -m window --space 10; yabai -m space --focus 14
+rshift + cmd - 5 : yabai -m window --space 10; yabai -m space --focus 15
+rshift + cmd - 6 : yabai -m window --space 10; yabai -m space --focus 16
+rshift + cmd - 7 : yabai -m window --space 10; yabai -m space --focus 17
+rshift + cmd - 8 : yabai -m window --space 10; yabai -m space --focus 18
+rshift + cmd - 9 : yabai -m window --space 10; yabai -m space --focus 19
+rshift + cmd - 0 : yabai -m window --space 10; yabai -m space --focus 20
 
 # focus monitor
 ctrl + alt - 1  : yabai -m display --focus 1
 ctrl + alt - 2  : yabai -m display --focus 2
 ctrl + alt - 3  : yabai -m display --focus 3
-ctrl + alt - 3  : yabai -m display --focus 4
+ctrl + alt - 4  : yabai -m display --focus 4
+ctrl + alt - 5  : yabai -m display --focus 5
 ctrl + alt - x  : yabai -m display --focus last
 ctrl + alt - z  : yabai -m display --focus prev
 ctrl + alt - c  : yabai -m display --focus next
