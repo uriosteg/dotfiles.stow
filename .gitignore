@@ -1,8 +1,7 @@
 # Ignore files downloaded by plugins
 
 github*
-
 tmux/
 tmux/plugins/*
-
 vim/bundle/*
+kitty/kitty-themes/*
