@@ -65,22 +65,36 @@ antigen bundle taskwarrior                                 # taskwarrior complet
 antigen bundle fancy-ctrl-z                                # use ctrl-z to switch to vim
 antigen bundle git-auto-fetch                              # fetch changes automatically
 antigen bundle colored-man-pages                           # color man pages 
+antigen bundle zsh-brew-services                           # completion fro brew services
 antigen bundle zsh-navigation-tools                        # tools for history
 antigen bundle history-substring-search                    # history search 
 
 #antigen bundle  zpm-zsh/ls                                # 
+antigen bundle  oow/macos                                  # macos aliases
 antigen bundle  zpm-zsh/colors                             #
 antigen bundle  gko/ssh-connect                            #
 antigen bundle  Tarrasch/zsh-bd                            #
 antigen bundle  zpm-zsh/dropbox                            #
+antigen bundle  gko/ssh-connect                            # search ssh in history
+antigen bundle  desyncr/auto-ls                            # auto-ls on cd
+antigen bundle  sharat87/pip-app                           # install pip in a virtualenv
+antigen bundle  aurenkt/zsh-vimto                          # vim like visual
 antigen bundle  b4b4r07/emoji-cli                          #
+antigen bundle  wakeful/zsh-packer                         # completion for packer
+antigen bundel  hchbaw/auto-fu.zsh                         # show completion options
 antigen bundle  Tarrasch/zsh-colors                        #
 #antigen bundle  h3poteto/zsh-ec2ssh                       #
 antigen bundle  s7anley/zsh-geeknote                       #
+antigen bundle  caarlos0/zsh-git-sync                      # auto git sync
 antigen bundle  willghatch/zsh-snippets                    #
+antigen bundle  arialdomartini/oh-my-git                   # oh-my-git prompt
+antigen bundle  mwilliammyers/plugin-osx                   # osx aliases
 antigen bundle  chrissicool/zsh-256color                   #
+antigen bundle  selop/newman-autocomplete                  # completion for newman
+antigen bundle  srijanshetty/zsh-pip-completion            # completion for pip
 antigen bundle  unixorn/warhol.plugin.zsh                  #
 antigen bundle  gantsign/zsh-plugins ctop                  #
+antigen bundle  changyuheng/zsh-interactive-cd             # fzf directory chooser
 #antigen bundle  MichaelAquilina/zsh-emojis                #
 antigen bundle  tarruda/zsh-autosuggestions                #
 antigen bundle  felixr/docker-zsh-completion               #
@@ -91,8 +105,10 @@ antigen bundle  zdharma/history-search-multi-word          #
 #antigen bundle  zsh-users/zsh-syntax-highlighting         #
 antigen bundle  viasite-ansible/zsh-ansible-server         #
 antigen bundle  EslamElHusseiny/aws_manager_plugin         #
+antigen bundle  MichaelAquilina/zsh-you-should-use         # completion for aliases
 antigen bundle  unixorn/autoupdate-antigen.zshplugin       #
 antigen bundle  zsh-users/zsh-history-substring-search     #
+antigen bundle unixorn/bitbucket-git-helpers.plugin.zsh    # merge and create bitbucket pull requests
 #antigen bundle  MichaelAquilina/zsh-autoswitch-virtualenv #
 antigen bundle  trapd00r/zsh-syntax-highlighting-filetypes #
 
