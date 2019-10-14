@@ -81,7 +81,7 @@ antigen bundle  sharat87/pip-app                           # install pip in a vi
 antigen bundle  aurenkt/zsh-vimto                          # vim like visual
 antigen bundle  b4b4r07/emoji-cli                          #
 antigen bundle  wakeful/zsh-packer                         # completion for packer
-antigen bundel  hchbaw/auto-fu.zsh                         # show completion options
+antigen bundle  hchbaw/auto-fu.zsh                         # show completion options
 antigen bundle  Tarrasch/zsh-colors                        #
 #antigen bundle  h3poteto/zsh-ec2ssh                       #
 antigen bundle  s7anley/zsh-geeknote                       #
