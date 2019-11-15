@@ -22,6 +22,7 @@ alias l2='exa -Flah ../..'
 alias l3='exa -Flah ../../..' 
 alias l4='exa -Flah ../../../..' 
 alias l5='exa -Flah ../../../../..' 
+alias tf='terraform'
 alias :q='exit'
 alias :wq='exit'
 alias xcl="scim"
@@ -45,6 +46,10 @@ alias cdiff='colordiff'
 alias cls='colorls'
 alias cll='colorls -la'
 alias rwm='brew services restart skhd && brew services restart yabai'
+alias trel="lsd --tree"
+alias trex="exa --tree"
+alias trec="colorls --tree"
+alias moji='gitmoji -l|fzf|rg -o ":.*:"|pbcopy'
 
 # Vim aliases
 alias vi='vim'
