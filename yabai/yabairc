@@ -36,11 +36,11 @@ yabai -m config normal_window_opacity        0.85
 
 # general space settings
 yabai -m config layout                       bsp
-yabai -m config top_padding                  10
-yabai -m config bottom_padding               10
-yabai -m config left_padding                 10
-yabai -m config right_padding                10
-yabai -m config window_gap                   10
+yabai -m config top_padding                  38
+yabai -m config bottom_padding               20
+yabai -m config left_padding                 20
+yabai -m config right_padding                20
+yabai -m config window_gap                   20
 
 # windows rules
 #yabai -m rule --add app="Skype for Business"   space=1
@@ -52,6 +52,7 @@ yabai -m config window_gap                   10
 #yabai -m rule --add app="Safari"               space=6
 #yabai -m rule --add app="Firefox"              space=6
 #yabai -m rule --add app="Visual Studio Code"   space=8
+yabai -m rule --add app="Übersicht" manage=off
 yabai -m rule --add app="^Activity Monitor$"   manage=off
 yabai -m rule --add app="^System Preferences$" manage=off
 
