@@ -268,7 +268,7 @@ brew "most"
 # Terminal based YouTube player and downloader
 brew "mps-youtube"
 # Media player based on MPlayer and mplayer2
-brew "mpv"
+brew "mpv", link: false
 # 'traceroute' and 'ping' in a single tool
 brew "mtr"
 # Tail multiple files in one terminal simultaneously
@@ -335,6 +335,8 @@ brew "pyenv-virtualenvwrapper"
 brew "ranger"
 # Ruby version manager
 brew "rbenv"
+# GNU Make with improved error handling, tracing, and a debugger
+brew "remake"
 # Perl-powered file rename script with many helpful built-ins
 brew "rename"
 # Search tool like grep and The Silver Searcher
@@ -395,6 +397,8 @@ brew "telnet"
 brew "terraform"
 # Ansible provisioner for Terraform
 brew "terraform-provisioner-ansible"
+# Thin wrapper for Terraform e.g. for locking state
+brew "terragrunt"
 # Multi-platform code-search similar to ack and ag
 brew "the_platinum_searcher"
 # Code-search similar to ack
@@ -510,6 +514,7 @@ cask "azure-data-studio"
 cask "bitbar"
 cask "bitwarden"
 cask "chromium"
+cask "cyberduck"
 cask "dbeaver-community"
 cask "docker"
 cask "firefox"
