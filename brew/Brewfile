@@ -12,10 +12,13 @@ tap "homebrew/services"
 tap "hudochenkov/sshpass"
 tap "isacikgoz/taps"
 tap "jesseduffield/lazydocker"
+tap "k-vernooy/tap"
+tap "kde-mac/kde"
 tap "koekeishiya/formulae"
 tap "microsoft/mssql-release"
 tap "rigellute/tap"
 tap "ringohub/redis-cli"
+tap "srkomodo/tap"
 tap "tsub/s3-edit"
 tap "tylerbrock/saw"
 tap "universal-ctags/universal-ctags"
@@ -30,6 +33,8 @@ brew "amazon-ecs-cli"
 brew "python"
 # Automate deployment, configuration, and upgrading
 brew "ansible"
+# Checks ansible playbooks for practices and behaviour
+brew "ansible-lint"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Weather in your terminal, with ANSI colors and Unicode symbols
@@ -169,6 +174,8 @@ brew "gem-rouge"
 brew "gem-terjira"
 brew "gem-thyme"
 brew "gem-tmuxinator"
+# CLI to retrieve AWS credentials from Okta
+brew "gimme-aws-creds"
 # Distributed revision control system
 brew "git"
 # Extensions to follow Vincent Driessen's branching model
@@ -225,6 +232,8 @@ brew "ipython"
 brew "jenkins-job-builder"
 # Command-line note taker
 brew "jrnl"
+# JSON parser and validator with a CLI
+brew "jsonlint"
 # User-friendly front-end to ssh-agent(1)
 brew "keychain"
 # Kubernetes command-line interface
@@ -395,8 +404,16 @@ brew "tcpstat"
 brew "telnet"
 # Tool to build, change, and version infrastructure
 brew "terraform"
+# Terraform State → Ansible Dynamic Inventory
+brew "terraform-inventory"
 # Ansible provisioner for Terraform
 brew "terraform-provisioner-ansible"
+# Improve Terraform's plan output
+brew "terraform_landscape"
+# CLI tool to generate terraform files from existing infrastructure
+brew "terraformer"
+# Export existing AWS resources to Terraform style (tf, tfstate)
+brew "terraforming"
 # Thin wrapper for Terraform e.g. for locking state
 brew "terragrunt"
 # Multi-platform code-search similar to ack and ag
@@ -436,7 +453,7 @@ brew "vault"
 # Subversion-like utility to work with Jackrabbit FileVault
 brew "vault-cli"
 # Vi 'workalike' with many additional features
-brew "vim", link: false
+brew "vim"
 # Terminal-based Tetris clone
 brew "vitetris"
 # Console-based network traffic monitor
@@ -459,6 +476,8 @@ brew "wv"
 brew "xdotool"
 # Command-line FTP client
 brew "yafc"
+# Linter for YAML files
+brew "yamllint"
 # Process YAML documents from the CLI
 brew "yq"
 # CLI tool for interacting with Zabbix monitoring system
@@ -488,6 +507,8 @@ brew "hudochenkov/sshpass/sshpass"
 brew "isacikgoz/taps/gitbatch"
 # A simple terminal UI for docker, written in Go
 brew "jesseduffield/lazydocker/lazydocker"
+# My rendition of the classic tetris.
+brew "k-vernooy/tap/tetris", link: false
 # Simple hotkey-daemon for macOS.
 brew "koekeishiya/formulae/skhd"
 # A tiling window manager for macOS based on binary space partitioning.
@@ -500,6 +521,8 @@ brew "microsoft/mssql-release/mssql-tools"
 brew "rigellute/tap/spotify-tui"
 # Install the redis-cli only.
 brew "ringohub/redis-cli/redis-cli"
+# An automatic updater for ShadowFox
+brew "srkomodo/tap/shadowfox-updater"
 # Edit directly a file on Amazon S3 in CLI
 brew "tsub/s3-edit/s3-edit"
 # Fast, multipurpose tool for AWS CloudWatch Logs
@@ -605,6 +628,7 @@ cask "mactex-no-gui"
 cask "macvim"
 cask "microsoft-edge-dev"
 cask "microsoft-teams"
+cask "mono-mdk"
 cask "mpv"
 cask "p4v"
 cask "pocket-casts"
@@ -619,14 +643,17 @@ cask "soduto"
 cask "sourcetree"
 cask "spotify"
 cask "taskwarrior-pomodoro"
+cask "twitch"
 cask "ubersicht"
 cask "vagrant"
 cask "vagrant-manager"
 cask "vagrant-vmware-utility"
 cask "virtualbox"
+cask "visual-studio"
 cask "visual-studio-code"
 cask "vivaldi"
 cask "vmware-fusion10"
+cask "zoomus"
 mas "Anaxi", id: 1317534033
 mas "Confluently", id: 1290720256
 mas "CopyClip", id: 595191960
