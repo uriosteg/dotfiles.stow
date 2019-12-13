@@ -63,6 +63,7 @@ antigen bundle zsh_reload                                  # reload zsh
 antigen bundle rand-quote                                  # random quote
 antigen bundle taskwarrior                                 # taskwarrior completion
 antigen bundle fancy-ctrl-z                                # use ctrl-z to switch to vim
+antigen bundle oh-my-matrix                                # matix like screen saver 
 antigen bundle git-auto-fetch                              # fetch changes automatically
 antigen bundle colored-man-pages                           # color man pages 
 antigen bundle zsh-brew-services                           # completion fro brew services
@@ -73,33 +74,43 @@ antigen bundle history-substring-search                    # history search
 antigen bundle  oow/macos                                  # macos aliases
 antigen bundle  zpm-zsh/colors                             #
 antigen bundle  gko/ssh-connect                            #
+antigen bundle  sukkaw/zsh-ipip                            # ipip 
 antigen bundle  Tarrasch/zsh-bd                            #
 antigen bundle  zpm-zsh/dropbox                            #
 antigen bundle  gko/ssh-connect                            # search ssh in history
-antigen bundle  desyncr/auto-ls                            # auto-ls on cd
+#antigen bundle  desyncr/auto-ls                            # auto-ls on cd
 antigen bundle  sharat87/pip-app                           # install pip in a virtualenv
 antigen bundle  aurenkt/zsh-vimto                          # vim like visual
+antigen bundle  wookayin/fzf-fasd                          # fasd + fzf
+antigen bundle  zpm-zsh/clipboard                          # better clipoard management
 antigen bundle  b4b4r07/emoji-cli                          #
 antigen bundle  wakeful/zsh-packer                         # completion for packer
 antigen bundle  hchbaw/auto-fu.zsh                         # show completion options
 antigen bundle  Tarrasch/zsh-colors                        #
-#antigen bundle  h3poteto/zsh-ec2ssh                       #
+antigen bundle  h3poteto/zsh-ec2ssh                        # list ec2 instances
+antigen bundle  mtxr/zsh-change-case                       # change case on zsh
 antigen bundle  s7anley/zsh-geeknote                       #
+antigen bundle  zdharma/zsh-startify                       # startify for zsh 
 antigen bundle  caarlos0/zsh-git-sync                      # auto git sync
+antigen bundle  gretzky/auto-color-ls                      # use color ls when changing dirs
+antigen bundle  nviennot/zsh-vim-plugin                    # open file on line number file:123/ 
 antigen bundle  willghatch/zsh-snippets                    #
 antigen bundle  arialdomartini/oh-my-git                   # oh-my-git prompt
 antigen bundle  mwilliammyers/plugin-osx                   # osx aliases
 antigen bundle  chrissicool/zsh-256color                   #
 antigen bundle  selop/newman-autocomplete                  # completion for newman
-antigen bundle  srijanshetty/zsh-pip-completion            # completion for pip
 antigen bundle  unixorn/warhol.plugin.zsh                  #
 antigen bundle  gantsign/zsh-plugins ctop                  #
-antigen bundle  changyuheng/zsh-interactive-cd             # fzf directory chooser
 #antigen bundle  MichaelAquilina/zsh-emojis                #
 antigen bundle  tarruda/zsh-autosuggestions                #
 antigen bundle  felixr/docker-zsh-completion               #
+antigen bundle  sindresorhus/pretty-time-zsh               # convert seconds to time 
 antigen bundle  MikeDacre/tmux-zsh-vim-titles              #
+antigen bundle  DarrinTisdale/zsh-aliases-exa              # exa aliases
 antigen bundle  ascii-soup/zsh-url-highlighter             #
+antigen bundle  rapgenic/zsh-git-complete-urls             # git url completion
+antigen bundle  changyuheng/zsh-interactive-cd             # fzf directory chooser
+antigen bundle  srijanshetty/zsh-pip-completion            # completion for pip
 antigen bundle  zdharma/fast-syntax-highlighting           #
 antigen bundle  zdharma/history-search-multi-word          #
 #antigen bundle  zsh-users/zsh-syntax-highlighting         #
