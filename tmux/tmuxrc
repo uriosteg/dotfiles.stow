@@ -1,4 +1,38 @@
 # Use UTF8
+
+# Plugin loading
+set -g @plugin 'tmux-plugins/tpm'                   # plugin manager
+set -g @plugin 'egel/tmux-gruvbox'                  # gruvbox theme
+#set -g @plugin 'jimeh/tmux-themepack'              # multiple themes
+set -g @plugin 'tmux-plugins/tmux-fpp'              #
+set -g @plugin 'tmux-plugins/tmux-cpu'              # show cpu percentage
+set -g @plugin 'tmux-plugins/tmux-open'             #
+set -g @plugin 'tmux-plugins/tmux-yank'             #
+set -g @plugin 'tmux-plugins/tmux-copycat'          # show battery status
+set -g @plugin 'tmux-plugins/tmux-battery'          #
+set -g @plugin 'tmux-plugins/tmux-logging'          #
+set -g @plugin 'tmux-plugins/tmux-sidebar'          #
+set -g @plugin 'tmux-plugins/tmux-sensible'         # bind reaonable keys
+set -g @plugin 'tmux-plugins/tmux-resurrect'        # restore a session
+set -g @plugin 'tmux-plugins/tmux-continuum'        #
+set -g @plugin 'tmux-plugins/tmux-net-speed'        # show network status
+set -g @plugin 'tmux-plugins/tmux-sessionist'       #
+set -g @plugin 'tmux-plugins/tmux-pain-control'     #
+set -g @plugin 'tmux-plugins/tmux-online-status'    #
+set -g @plugin 'tmux-plugins/tmux-maildir-counter'  # show mailbox status
+set -g @plugin 'tmux-plugins/tmux-prefix-highlight' # show prefix status
+
+# Plugin settings
+#set -g @themepack 'powerline/block/cyan'
+set -g @prefix_highlight_bg 'colour31'
+set -g @prefix_highlight_fg 'colour254'
+set -g @net_speed_format '%10s %10s'
+set -g @prefix_highlight_show_copy_mode 'on'
+set -g @prefix_highlight_copy_mode_attr 'fg=white,bg=blue'
+set -g @sysstat_mem_view_tmpl 'MEM: #[fg=#{mem.color}]#{mem.pused} (#{mem.used})#[default]'
+set -g @sysstat_swap_view_tmpl 'SW: #[fg=#{swap.color}]#{swap.pused} (#{swap.used})#[default]'
+set -g @continuum-save-interval '15'
+
 # Variables
 tmux_bg_color='#3c3836'
 tmux_fg_color='#a89984'
@@ -70,38 +104,5 @@ set-option -g status-left " #[fg=#b8bb26]%b-%d %a $sep #[fg=#b8bb26]%H:%M $sep #
 
 set-window-option -g window-status-format '#[bg=colour238]#[fg=colour107] #I #[bg=colour239]#[fg=colour110] #[bg=colour240]#W#[bg=colour239]#[fg=colour195]#F#[bg=colour238] '
 set-window-option -g window-status-current-format '#[bg=colour236]#[fg=colour215,bold] #I:#[bg=colour235]#[fg=colour167] #[bg=colour234]#W#[bg=colour235]#[fg=colour195]#F#[bg=colour236] '
-
-# Plugin loading
-set -g @plugin 'tmux-plugins/tpm'                   # plugin manager
-#set -g @plugin 'egel/tmux-gruvbox'                 # gruvbox theme
-#set -g @plugin 'jimeh/tmux-themepack'              # multiple themes
-set -g @plugin 'tmux-plugins/tmux-fpp'              #
-set -g @plugin 'tmux-plugins/tmux-cpu'              # show cpu percentage
-set -g @plugin 'tmux-plugins/tmux-open'             #
-set -g @plugin 'tmux-plugins/tmux-yank'             #
-set -g @plugin 'tmux-plugins/tmux-copycat'          # show battery status
-set -g @plugin 'tmux-plugins/tmux-battery'          #
-set -g @plugin 'tmux-plugins/tmux-logging'          #
-set -g @plugin 'tmux-plugins/tmux-sidebar'          #
-set -g @plugin 'tmux-plugins/tmux-sensible'         # bind reaonable keys
-set -g @plugin 'tmux-plugins/tmux-resurrect'        # restore a session
-set -g @plugin 'tmux-plugins/tmux-continuum'        #
-set -g @plugin 'tmux-plugins/tmux-net-speed'        # show network status
-set -g @plugin 'tmux-plugins/tmux-sessionist'       #
-set -g @plugin 'tmux-plugins/tmux-pain-control'     #
-set -g @plugin 'tmux-plugins/tmux-online-status'    #
-set -g @plugin 'tmux-plugins/tmux-maildir-counter'  # show mailbox status
-set -g @plugin 'tmux-plugins/tmux-prefix-highlight' # show prefix status
-
-# Plugin settings
-#set -g @themepack 'powerline/block/cyan'
-set -g @prefix_highlight_bg 'colour31'
-set -g @prefix_highlight_fg 'colour254'
-set -g @net_speed_format '%10s %10s'
-set -g @prefix_highlight_show_copy_mode 'on'
-set -g @prefix_highlight_copy_mode_attr 'fg=white,bg=blue'
-set -g @sysstat_mem_view_tmpl 'MEM: #[fg=#{mem.color}]#{mem.pused} (#{mem.used})#[default]'
-set -g @sysstat_swap_view_tmpl 'SW: #[fg=#{swap.color}]#{swap.pused} (#{swap.used})#[default]'
-set -g @continuum-save-interval '15'
 
 run '~/.tmux/plugins/tpm/tpm'
