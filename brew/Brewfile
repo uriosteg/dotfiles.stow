@@ -47,6 +47,8 @@ brew "antiword"
 brew "aria2"
 # Record and share terminal sessions
 brew "asciinema"
+# Aquarium animation in ASCII art
+brew "asciiquarium"
 # Integrated shell for working with the AWS CLI
 brew "aws-shell"
 # Official Amazon AWS command-line interface
@@ -416,6 +418,10 @@ brew "terraformer"
 brew "terraforming"
 # Thin wrapper for Terraform e.g. for locking state
 brew "terragrunt"
+# Tool providing extra functionality for Terraform
+brew "terrahelp"
+# Terraform automation and orchestration tool
+brew "terrahub"
 # Multi-platform code-search similar to ack and ag
 brew "the_platinum_searcher"
 # Code-search similar to ack
@@ -533,6 +539,7 @@ cask "0-ad"
 cask "alacritty"
 cask "android-platform-tools"
 cask "authy"
+cask "aws-vault"
 cask "azure-data-studio"
 cask "bitbar"
 cask "bitwarden"
@@ -540,6 +547,7 @@ cask "chromium"
 cask "cyberduck"
 cask "dbeaver-community"
 cask "docker"
+cask "duet"
 cask "firefox"
 cask "font-3270-nerd-font"
 cask "font-3270-nerd-font-mono"
@@ -655,6 +663,7 @@ cask "vivaldi"
 cask "vmware-fusion10"
 cask "zoomus"
 mas "Anaxi", id: 1317534033
+mas "Bitwarden", id: 1352778147
 mas "Confluently", id: 1290720256
 mas "CopyClip", id: 595191960
 mas "Dark Reader for Safari", id: 1438243180
