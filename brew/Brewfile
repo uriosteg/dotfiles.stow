@@ -1,5 +1,6 @@
 tap "browsh-org/browsh"
 tap "caskroom/cask"
+tap "charmbracelet/tap"
 tap "eddieantonio/eddieantonio"
 tap "heroku/brew"
 tap "homebrew/bundle"
@@ -49,12 +50,18 @@ brew "aria2"
 brew "asciinema"
 # Aquarium animation in ASCII art
 brew "asciiquarium"
+# Automatically formats Python code to conform to the PEP 8 style guide
+brew "autopep8"
+# Client for Amazon CloudFormation web service
+brew "aws-cfn-tools"
 # Integrated shell for working with the AWS CLI
 brew "aws-shell"
 # Official Amazon AWS command-line interface
 brew "awscli"
 # Simple command-line tool to read AWS CloudWatch logs
 brew "awslogs"
+# Utility for easily assuming AWS IAM roles from the command-line
+brew "awsume"
 # Microsoft Azure CLI 2.0
 brew "azure-cli"
 # Programmable completion for Bash 3.2
@@ -89,6 +96,8 @@ brew "calcurse"
 brew "cargo-completion"
 # Robust and modular log colorizer
 brew "ccze"
+# Validate CloudFormation templates against the CloudFormation spec
+brew "cfn-lint"
 # Ruby environment tool
 brew "chruby"
 # Statistics utility to count lines of code
@@ -268,6 +277,8 @@ brew "maven"
 brew "maven-completion"
 # Shell for Maven
 brew "maven-shell"
+# Show markdown documents on text terminals
+brew "mdcat"
 # Command-line based markdown presentation tool
 brew "mdp"
 # Terminal-based visual file manager
@@ -504,6 +515,8 @@ brew "zsh-syntax-highlighting"
 brew "zshdb"
 # The modern, text-based browser
 brew "browsh-org/browsh/browsh"
+# Render markdown on the CLI
+brew "charmbracelet/tap/glow"
 # It's like cat(1), but for images.
 brew "eddieantonio/eddieantonio/imgcat"
 # Everything you need to get started with Heroku
