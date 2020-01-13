@@ -1,7 +1,11 @@
 tap "browsh-org/browsh"
 tap "caskroom/cask"
 tap "charmbracelet/tap"
+tap "cjbassi/gotop"
+tap "dbcli/tap"
+tap "dduan/formulae"
 tap "eddieantonio/eddieantonio"
+tap "gwolf3/craft"
 tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
@@ -30,8 +34,6 @@ cask "xquartz"
 brew "ack"
 # CLI for Amazon ECS to manage clusters and tasks for development
 brew "amazon-ecs-cli"
-# Interpreted, interactive, object-oriented programming language
-brew "python"
 # Automate deployment, configuration, and upgrading
 brew "ansible"
 # Checks ansible playbooks for practices and behaviour
@@ -50,6 +52,8 @@ brew "aria2"
 brew "asciinema"
 # Aquarium animation in ASCII art
 brew "asciiquarium"
+# Interpreted, interactive, object-oriented programming language
+brew "python"
 # Automatically formats Python code to conform to the PEP 8 style guide
 brew "autopep8"
 # Client for Amazon CloudFormation web service
@@ -98,6 +102,10 @@ brew "cargo-completion"
 brew "ccze"
 # Validate CloudFormation templates against the CloudFormation spec
 brew "cfn-lint"
+# Tools and libraries to manipulate images in many formats
+brew "imagemagick"
+# Versatile and fast Unicode/ASCII/ANSI graphics renderer
+brew "chafa"
 # Ruby environment tool
 brew "chruby"
 # Statistics utility to count lines of code
@@ -170,6 +178,8 @@ brew "fizsh"
 brew "fortune"
 # Find files with SQL-like queries
 brew "fselect"
+# Search through your filesystem with SQL-esque queries
+brew "fsql"
 # Command-line JSON processing tool
 brew "fx"
 # Command-line fuzzy finder written in Go
@@ -189,6 +199,10 @@ brew "gem-tmuxinator"
 brew "gimme-aws-creds"
 # Distributed revision control system
 brew "git"
+# Syntax-highlighting pager for git and diff output
+brew "git-delta"
+# Quickly rewrite git repository history
+brew "git-filter-repo"
 # Extensions to follow Vincent Driessen's branching model
 brew "git-flow"
 # Bash-tool to store the private data inside a git repo
@@ -207,6 +221,8 @@ brew "goaccess"
 brew "googler"
 # Colorize logfiles and command output
 brew "grc"
+# Command-line hex viewer
+brew "hexyl"
 # Convert source code to formatted text with syntax highlighting
 brew "highlight"
 # Bash completion for Homesick
@@ -229,8 +245,6 @@ brew "icdiff"
 brew "ifstat"
 # Display an interface's bandwidth usage
 brew "iftop"
-# Tools and libraries to manipulate images in many formats
-brew "imagemagick"
 # Program for recording a UNIX terminal session
 brew "ipbt"
 # Calculate various network masks, etc. from a given IP address
@@ -255,6 +269,8 @@ brew "launchctl-completion"
 brew "lazygit"
 # Sophisticated file transfer program
 brew "lftp"
+# SIXEL encoder/decoder implementation
+brew "libsixel"
 # C implementation of the XDG Base Directory specifications
 brew "libxdg-basedir"
 # Curses-based tool for viewing and analyzing log files
@@ -329,6 +345,8 @@ brew "packer"
 brew "packer-completion"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
+# Command-line tool to generate, analyze, convert and manipulate colors
+brew "pastel"
 # Search PDFs for strings matching a regular expression
 brew "pdfgrep"
 # Simplistic interactive filtering tool
@@ -341,10 +359,14 @@ brew "pgcli"
 brew "pinentry-mac"
 # Bash completion for Pip
 brew "pip-completion"
+# Python dependency management tool
+brew "pipenv"
 # Animated pipes terminal screensaver
 brew "pipes-sh"
 # Execute binaries from Python packages in isolated environments
 brew "pipx"
+# 📦🚀 Fast, disk space efficient package manager
+brew "pnpm"
 # Cowsay but with ponies
 brew "ponysay"
 # Monitor data's progress through a pipe
@@ -373,6 +395,8 @@ brew "ruby-completion"
 brew "s3cmd"
 # FUSE-based file system backed by Amazon S3
 brew "s3fs"
+# Tool for shell commands execution, visualization and alerting
+brew "sampler"
 # Wrapper around libsass that helps to create command-line apps
 brew "sassc"
 # Spreadsheet program for the terminal, using ncurses
@@ -391,7 +415,7 @@ brew "sl"
 brew "slackcat"
 # Yet another network load monitor
 brew "slurm"
-# netcat on steroids
+# SOcket CAT: netcat on steroids
 brew "socat"
 # Bash completion for Sonar
 brew "sonar-completion"
@@ -407,6 +431,8 @@ brew "sshfs"
 brew "stow"
 # Feature-rich console based todo list manager
 brew "task"
+# Command-line Kanban board/task manager with support for Trello
+brew "taskell"
 # Shell wrapper for Taskwarrior commands
 brew "tasksh"
 # Command-line packet analyzer
@@ -461,6 +487,8 @@ brew "tree"
 brew "tsung"
 # Digital clock in ncurses
 brew "tty-clock"
+# Unicode database query tool for the command-line
+brew "uni"
 # URL extractor/launcher
 brew "urlview"
 # Bash completion for Vagrant
@@ -479,6 +507,8 @@ brew "vnstat"
 brew "w3m"
 # Executes a program periodically, showing output fullscreen
 brew "watch"
+# Extensible IRC client
+brew "weechat"
 # Internet file retriever
 brew "wget"
 # Show the current WiFi network password
@@ -517,6 +547,10 @@ brew "zshdb"
 brew "browsh-org/browsh/browsh"
 # Render markdown on the CLI
 brew "charmbracelet/tap/glow"
+# A terminal based graphical activity monitor inspired by gtop and vtop
+brew "cjbassi/gotop/gotop"
+# Tree command, improved.
+brew "dduan/formulae/tre"
 # It's like cat(1), but for images.
 brew "eddieantonio/eddieantonio/imgcat"
 # Everything you need to get started with Heroku
@@ -557,6 +591,7 @@ cask "azure-data-studio"
 cask "bitbar"
 cask "bitwarden"
 cask "chromium"
+cask "cool-retro-term"
 cask "cyberduck"
 cask "dbeaver-community"
 cask "docker"
@@ -640,6 +675,7 @@ cask "font-ubuntu-nerd-font-mono"
 cask "font-ubuntumono-nerd-font"
 cask "font-ubuntumono-nerd-font-mono"
 cask "franz"
+cask "hiddenbar"
 cask "iterm2"
 cask "java"
 cask "keybase"
@@ -650,6 +686,7 @@ cask "macvim"
 cask "microsoft-edge-dev"
 cask "microsoft-teams"
 cask "mono-mdk"
+cask "moter"
 cask "mpv"
 cask "p4v"
 cask "pocket-casts"
@@ -662,6 +699,7 @@ cask "skype-for-business"
 cask "snwe"
 cask "soduto"
 cask "sourcetree"
+cask "spectacle"
 cask "spotify"
 cask "taskwarrior-pomodoro"
 cask "twitch"
@@ -673,6 +711,7 @@ cask "virtualbox"
 cask "visual-studio"
 cask "visual-studio-code"
 cask "vivaldi"
+cask "vlc"
 cask "vmware-fusion10"
 cask "zoomus"
 mas "Anaxi", id: 1317534033
