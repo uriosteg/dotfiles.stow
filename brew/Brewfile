@@ -36,6 +36,8 @@ brew "ack"
 brew "amazon-ecs-cli"
 # Automate deployment, configuration, and upgrading
 brew "ansible"
+# Generates static HTML overview page from Ansible facts
+brew "ansible-cmdb"
 # Checks ansible playbooks for practices and behaviour
 brew "ansible-lint"
 # Lightweight and flexible command-line JSON processor
@@ -174,6 +176,8 @@ brew "ncurses"
 brew "zsh"
 # Fish-like front end for ZSH
 brew "fizsh"
+# Lint your Python code for style and logical errors
+brew "flake8"
 # Infamous electronic fortune-cookie generator
 brew "fortune"
 # Find files with SQL-like queries
@@ -343,6 +347,8 @@ brew "odt2txt"
 brew "packer"
 # Bash completion for Packer
 brew "packer-completion"
+# Learn vim commands via a game
+brew "pacvim"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
 # Command-line tool to generate, analyze, convert and manipulate colors
@@ -369,12 +375,18 @@ brew "pipx"
 brew "pnpm"
 # Cowsay but with ponies
 brew "ponysay"
+# Linter for prose
+brew "proselint"
 # Monitor data's progress through a pipe
 brew "pv"
+# Simple Python style checker in one Python file
+brew "pycodestyle"
 # Pyenv plugin to manage virtualenv
 brew "pyenv-virtualenv"
 # Alternative to pyenv for managing virtualenvs
 brew "pyenv-virtualenvwrapper"
+# It's not just a linter that annoys you!
+brew "pylint"
 # File browser
 brew "ranger"
 # Ruby version manager
@@ -469,6 +481,8 @@ brew "thefuck"
 brew "tig"
 # Simplified and community-driven man pages
 brew "tldr"
+# Instant terminal sharing
+brew "tmate"
 # Terminal multiplexer
 brew "tmux"
 # Shell completion for Tmuxinator
@@ -525,6 +539,8 @@ brew "xdotool"
 brew "yafc"
 # Linter for YAML files
 brew "yamllint"
+# Formatter for python code
+brew "yapf"
 # Process YAML documents from the CLI
 brew "yq"
 # CLI tool for interacting with Zabbix monitoring system
@@ -683,7 +699,7 @@ cask "kitty"
 cask "lepton"
 cask "mactex-no-gui"
 cask "macvim"
-cask "microsoft-edge-dev"
+cask "microsoft-edge"
 cask "microsoft-teams"
 cask "mono-mdk"
 cask "moter"
@@ -710,7 +726,6 @@ cask "vagrant-vmware-utility"
 cask "virtualbox"
 cask "visual-studio"
 cask "visual-studio-code"
-cask "vivaldi"
 cask "vlc"
 cask "vmware-fusion10"
 cask "zoomus"
