@@ -54,6 +54,7 @@ alias trel="lsd --tree"
 alias trex="exa --tree"
 alias trec="colorls --tree"
 alias moji='gitmoji -l|fzf|rg -o ":.*:"|pbcopy'
+alias awsume='. awsume'
 
 # Vim aliases
 alias vi='vim'
@@ -65,7 +66,6 @@ alias vdiff='vimdiff'
 alias vinote='vim +SimplenoteList'
 
 # Error aliases
-alias sl='ls'
 alias les='less'
 alias lez='less'
 alias lesss='less'
