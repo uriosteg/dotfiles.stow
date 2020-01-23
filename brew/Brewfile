@@ -471,6 +471,8 @@ brew "terragrunt"
 brew "terrahelp"
 # Terraform automation and orchestration tool
 brew "terrahub"
+# Linter for Terraform files
+brew "tflint"
 # Multi-platform code-search similar to ack and ag
 brew "the_platinum_searcher"
 # Code-search similar to ack
@@ -603,7 +605,6 @@ cask "alacritty"
 cask "android-platform-tools"
 cask "authy"
 cask "aws-vault"
-cask "azure-data-studio"
 cask "bitbar"
 cask "bitwarden"
 cask "chromium"
